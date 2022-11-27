@@ -282,7 +282,7 @@ public class Card {
         if (isUp()) {
             isUp = false;
             //sounds.playSound(Sounds.names.CARD_FLIP_BACK);
-            scores.undo(this, getStack());
+            //scores.undo(this, getStack());
 
             if (!stopUiUpdates) {
                 animate.flipCard(this, false);
@@ -290,7 +290,7 @@ public class Card {
         } else {
             isUp = true;
             //sounds.playSound(Sounds.names.CARD_FLIP);
-            scores.move(this, getStack());
+            //scores.move(this, getStack());
             recordList.addFlip(this);
 
             if (!stopUiUpdates) {

@@ -68,7 +68,7 @@ public class DialogWon extends CustomDialogFragment {
                             break;
                         case 2:
                             if (gameManager.hasLoaded) {
-                                timer.save();
+                                //timer.save();
                                 gameLogic.setWonAndReloaded();
                                 gameLogic.save();
                             }
@@ -90,7 +90,7 @@ public class DialogWon extends CustomDialogFragment {
             TextView text2 = view.findViewById(R.id.dialog_won_text2);
             TextView text3 = view.findViewById(R.id.dialog_won_text3);
 
-            score = (savedState != null && savedState.containsKey(KEY_SCORE))
+            /*score = (savedState != null && savedState.containsKey(KEY_SCORE))
                     ? savedState.getLong(KEY_SCORE)
                     : scores.getPreBonus();
             bonus = (savedState != null && savedState.containsKey(KEY_BONUS))
@@ -98,7 +98,7 @@ public class DialogWon extends CustomDialogFragment {
                     : scores.getBonus();
             total = (savedState != null && savedState.containsKey(KEY_TOTAL))
                     ? savedState.getLong(KEY_TOTAL)
-                    : scores.getScore();
+                    : scores.getScore();*/
 
             text1.setText(String.format(Locale.getDefault(), getContext()
                     .getString(R.string.dialog_win_score), score));

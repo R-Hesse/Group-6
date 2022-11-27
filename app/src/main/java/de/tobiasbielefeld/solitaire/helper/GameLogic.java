@@ -57,7 +57,7 @@ public class GameLogic {
      */
     public void save() {
         if (!prefs.isDeveloperOptionSavingDisabled() && !stopUiUpdates) {
-            scores.save();
+            //scores.save();
             recordList.save();
             prefs.saveWon(won);
             prefs.saveWonAndReloaded(wonAndReloaded);
@@ -116,9 +116,9 @@ public class GameLogic {
             //in case the game was selected from the main menu and it was already won, start a new game
             newGame();
         } else {
-            scores.load();
+            //scores.load();
             recordList.load();
-            timer.setCurrentTime(prefs.getSavedEndTime());
+            //timer.setCurrentTime(prefs.getSavedEndTime());
 
             //timer will be loaded in onResume() of the game manager
 
@@ -206,16 +206,16 @@ public class GameLogic {
         //reset EVERYTHING
         if (!won) {                                                                                 //if the game has been won, the score was already saved
             incrementPlayedGames();
-            scores.addNewScore(movedFirstCard || currentGame.saveRecentScore());
+            //scores.addNewScore(movedFirstCard || currentGame.saveRecentScore());
             currentGame.onGameEnd();
         }
 
         currentGame.reset();
         animate.reset();
-        scores.reset();
+        //scores.reset();
         movingCards.reset();
         recordList.reset();
-        timer.reset();
+        //timer.reset();
         autoComplete.hideButton();
 
         for (Stack stack : stacks) {
@@ -255,10 +255,10 @@ public class GameLogic {
         if (!won && !autoComplete.isRunning() && ((prefs.isDeveloperOptionInstantWinEnabled() && movedFirstCard) || currentGame.winTest())) {
             incrementPlayedGames();
             incrementNumberWonGames();
-            scores.updateBonus();
-            scores.addNewScore(movedFirstCard);
+            //scores.updateBonus();
+            //scores.addNewScore(movedFirstCard);
             recordList.reset();
-            timer.setWinningTime();
+            //timer.setWinningTime();
             autoComplete.hideButton();
             animate.winAnimation();
             won = true;

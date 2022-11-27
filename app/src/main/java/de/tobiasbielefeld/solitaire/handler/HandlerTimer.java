@@ -14,7 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
- */
+ *//*
+
 
 package de.tobiasbielefeld.solitaire.handler;
 
@@ -28,9 +29,11 @@ import de.tobiasbielefeld.solitaire.ui.GameManager;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 
+*/
 /**
  * Handler to update the current time and show it
- */
+ *//*
+
 
 public class HandlerTimer extends Handler {
 
@@ -45,10 +48,12 @@ public class HandlerTimer extends Handler {
 
         //is always called at least once a game started, because this gets executed before the
         //won variable in gameLogic was loaded
-        if (timer.isRunning() && !gameLogic.hasWon()) {
+        */
+/*if (timer.isRunning() && !gameLogic.hasWon()) {
             timer.setCurrentTime((System.currentTimeMillis() - timer.getStartTime()) / 1000);
             timer.handlerTimer.sendEmptyMessageDelayed(0, 1000);
-        }
+        }*//*
+
 
         if (prefs.getSavedHideTime()) {
             gm.mainTextViewTime.setText("");
@@ -65,4 +70,4 @@ public class HandlerTimer extends Handler {
                     time / 3600, (time % 3600) / 60, (time % 60)));  //in hours:minutes:seconds format
         }
     }
-}
+}*/

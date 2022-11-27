@@ -149,7 +149,7 @@ public class AutoComplete extends HelperCardMovement {
             Card card = cardAndStack.getCard();
             Stack destination = cardAndStack.getStack();
 
-            scores.move(card, destination);
+            //scores.move(card, destination);
             card.removeFromCurrentStack();
             destination.addCard(card);
             card.bringToFront();

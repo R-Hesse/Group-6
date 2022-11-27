@@ -48,9 +48,9 @@ import de.tobiasbielefeld.solitaire.helper.Hint;
 import de.tobiasbielefeld.solitaire.helper.MovingCards;
 import de.tobiasbielefeld.solitaire.helper.Preferences;
 import de.tobiasbielefeld.solitaire.helper.RecordList;
-import de.tobiasbielefeld.solitaire.helper.Scores;
+//import de.tobiasbielefeld.solitaire.helper.Scores;
 import de.tobiasbielefeld.solitaire.helper.Sounds;
-import de.tobiasbielefeld.solitaire.helper.Timer;
+//import de.tobiasbielefeld.solitaire.helper.Timer;
 
 /**
  * static data which is shared across the whole project, i like this more than passing stuff around
@@ -72,13 +72,13 @@ public class SharedData {
     public static Stack[] stacks;
 
     public static Preferences prefs;
-    public static Scores scores;
+    //public static Scores scores;
 
     public static GameLogic gameLogic;
     public static Animate animate;
 
     public static AutoComplete autoComplete;
-    public static Timer timer;
+    //public static Timer timer;
     public static Sounds sounds;
     public static RecordList recordList;
     public static AutoMove autoMove;
@@ -197,7 +197,7 @@ public class SharedData {
      */
     public static void moveToStack(ArrayList<Card> cards, ArrayList<Stack> destinations, int option) {
 
-        if (!stopUiUpdates) {
+        /*if (!stopUiUpdates) {
             if (option == OPTION_UNDO) {
                 scores.undo(cards, destinations);
             } else if (option == 0) {
@@ -215,7 +215,7 @@ public class SharedData {
                 scores.move(cards, destinations);
             }
             //else if (option == OPTION_NO_RECORD), do nothing
-        }
+        }*/
 
 
         for (int i = 0; i < cards.size(); i++) {

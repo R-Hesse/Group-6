@@ -16,6 +16,7 @@
  * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
  */
 
+/*
 package de.tobiasbielefeld.solitaire.ui.statistics;
 
 import android.os.Bundle;
@@ -36,17 +37,21 @@ import de.tobiasbielefeld.solitaire.helper.Scores;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 
+*/
 /**
  * Shows the recent scores of the current game
- */
+ *//*
+
 
 public class RecentScoresFragment extends Fragment {
 
     private String dollar;
 
-    /**
+    */
+/**
      * Loads the high score list
-     */
+     *//*
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_statistics_tab3, container, false);
@@ -93,10 +98,12 @@ public class RecentScoresFragment extends Fragment {
         return view;
     }
 
-    /**
+    */
+/**
      * loads the other shown data
-     */
+     *//*
+
     private void loadData() {
         dollar = currentGame.isPointsInDollar() ? "$" : "";
     }
-}
+}*/

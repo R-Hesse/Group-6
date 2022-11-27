@@ -53,10 +53,10 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
         switch (index) {
             case 0:
                 return new StatisticsFragment();
-            case 1:
+            /*case 1:
                 return new HighScoresFragment();
             case 2:
-                return new RecentScoresFragment();
+                return new RecentScoresFragment();*/
         }
 
         return null;

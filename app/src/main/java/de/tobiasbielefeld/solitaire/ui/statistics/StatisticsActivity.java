@@ -101,7 +101,7 @@ public class StatisticsActivity extends CustomAppCompatActivity {
      * deletes the data, reloads the activity
      */
     public void deleteHighScores() {
-        scores.deleteScores();
+        //scores.deleteScores();
         gameLogic.deleteStatistics();
         currentGame.deleteAdditionalStatisticsData();
         showToast(getString(R.string.statistics_button_deleted_all_entries), this);

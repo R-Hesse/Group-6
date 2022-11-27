@@ -57,9 +57,9 @@ import de.tobiasbielefeld.solitaire.helper.EnsureMovability;
 import de.tobiasbielefeld.solitaire.helper.GameLogic;
 import de.tobiasbielefeld.solitaire.helper.Hint;
 import de.tobiasbielefeld.solitaire.helper.RecordList;
-import de.tobiasbielefeld.solitaire.helper.Scores;
+//import de.tobiasbielefeld.solitaire.helper.Scores;
 import de.tobiasbielefeld.solitaire.helper.Sounds;
-import de.tobiasbielefeld.solitaire.helper.Timer;
+//import de.tobiasbielefeld.solitaire.helper.Timer;
 import de.tobiasbielefeld.solitaire.ui.settings.Settings;
 import de.tobiasbielefeld.solitaire.ui.statistics.StatisticsActivity;
 
@@ -119,11 +119,11 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
 
         autoMove = new AutoMove(gm);
         hint = new Hint(gm);
-        scores = new Scores(gm);
+        //scores = new Scores(gm);
         gameLogic = new GameLogic(gm);
         animate = new Animate(gm);
         autoComplete = new AutoComplete(gm);
-        timer = new Timer(gm);
+        //timer = new Timer(gm);
         sounds = new Sounds(gm);
         dealCards = new DealCards(gm);
         ensureMovability = new EnsureMovability();
@@ -142,7 +142,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
 
         ensureMovability.setShowDialog(dialog -> dialog.show(getSupportFragmentManager(), "DIALOG_ENSURE_MOVABILITY"));
 
-        scores.setCallback(this::updateScore);
+        //scores.setCallback(this::updateScore);
 
         handlerTestAfterMove = new WaitForAnimationHandler(gm, new WaitForAnimationHandler.MessageCallBack() {
             @Override
@@ -215,7 +215,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
             mainTextViewTime.setVisibility(GONE);
         }
 
-        scores.output();
+        //scores.output();
 
         //wait until the game layout dimensions are known, then draw everything
         ViewTreeObserver viewTreeObserver = layoutGame.getViewTreeObserver();
@@ -310,7 +310,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
         //else set the layout height/width as maximum
         currentGame.applyDirectionBorders(layoutGame);
 
-        scores.load();
+        //scores.load();
 
         updateLimitedRecyclesCounter();
 
@@ -326,7 +326,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
 
         //ony save if the game has been loaded before
         if (hasLoaded) {
-            timer.save();
+            //timer.save();
             gameLogic.save();
         }
 
@@ -360,7 +360,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
 
         activityPaused = false;
 
-        timer.load();
+        //timer.load();
         autoComplete.resume();
         autoMove.resume();
         hint.resume();

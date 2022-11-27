@@ -18,7 +18,7 @@
 
 package de.tobiasbielefeld.solitaire.helper;
 
-import de.tobiasbielefeld.solitaire.handler.HandlerTimer;
+//import de.tobiasbielefeld.solitaire.handler.HandlerTimer;
 import de.tobiasbielefeld.solitaire.ui.GameManager;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
@@ -30,7 +30,7 @@ import static de.tobiasbielefeld.solitaire.helper.Preferences.*;
  * not precise enough (?) so I just go the bit more complex way using the System.currentTimeMillis().
  */
 
-public class Timer {
+/*public class Timer {
 
     public HandlerTimer handlerTimer; //handler to show the current time
 
@@ -43,13 +43,13 @@ public class Timer {
         handlerTimer = new HandlerTimer(gm);
     }
 
-    /**
+    *//**
      * Returns the current playing time. If a winning time was saved, show this instead.
      * <p>
      * The time is in seconds!! not milliseconds!
      *
      * @return The time to show on the screen
-     */
+     *//*
     public long getCurrentTime() {
         return winningTime != 0 ? winningTime : currentTime;
     }
@@ -59,9 +59,9 @@ public class Timer {
         currentTime = time;
     }
 
-    /**
+    *//**
      * Save all necessary data to retrieve the played time on the next load.
-     */
+     *//*
     public void save() {
         if (stopUiUpdates) {
             return;
@@ -76,10 +76,10 @@ public class Timer {
         }
     }
 
-    /**
+    *//**
      * Load the time, but subtract the time where the game was paused. Also load the winning time,
      * if there is one. The default is Zero, which is counted as no winning time
-     */
+     *//*
     public void load() {
         running = true;
 
@@ -90,9 +90,9 @@ public class Timer {
         handlerTimer.sendEmptyMessage(0);
     }
 
-    /**
+    *//**
      * Reset all the data, so it will be shown as 0 seconds again.
-     */
+     *//*
     public void reset() {
         running = true;
 
@@ -121,4 +121,4 @@ public class Timer {
     public void setStartTime(long time) {
         startTime = time;
     }
-}
+}*/

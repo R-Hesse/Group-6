@@ -18,6 +18,7 @@
 
 package de.tobiasbielefeld.solitaire.ui.statistics;
 
+/*
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -32,21 +33,25 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 import de.tobiasbielefeld.solitaire.R;
-import de.tobiasbielefeld.solitaire.helper.Scores;
+//import de.tobiasbielefeld.solitaire.helper.Scores;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 
+*/
 /**
  * Shows the high scores of the current game
- */
+ *//*
+
 
 public class HighScoresFragment extends Fragment {
 
     private String dollar;
 
-    /**
+    */
+/**
      * Loads the high score list
-     */
+     *//*
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_statistics_tab2, container, false);
@@ -64,14 +69,16 @@ public class HighScoresFragment extends Fragment {
         TableLayout tableLayout = view.findViewById(R.id.statisticsTableHighScores);
         TextView textNoEntries = view.findViewById(R.id.statisticsTextNoEntries);
 
-        if (scores.getHighScore(0, 0) != 0) {
+        */
+/*if (scores.getHighScore(0, 0) != 0) {
             textNoEntries.setVisibility(View.GONE);
         }
 
         for (int i = 0; i < Scores.MAX_SAVED_SCORES; i++) { //for each entry in highScores, add a new view with it
             if (scores.getHighScore(i, 0) == 0) {        //if the score is zero, don't show it
                 continue;
-            }
+            }*//*
+
 
             TableRow row = (TableRow) LayoutInflater.from(getContext()).inflate(R.layout.statistics_scores_row, null);
 
@@ -80,10 +87,10 @@ public class HighScoresFragment extends Fragment {
             TextView textView3 = row.findViewById(R.id.row_cell_3);
             TextView textView4 = row.findViewById(R.id.row_cell_4);
 
-            textView1.setText(String.format(Locale.getDefault(), "%s %s", scores.getHighScore(i, 0), dollar));
-            long time = scores.getHighScore(i, 1);
-            textView2.setText(String.format(Locale.getDefault(), "%02d:%02d:%02d", time / 3600, (time % 3600) / 60, (time % 60)));
-            textView3.setText(DateFormat.getDateInstance(DateFormat.SHORT).format(scores.getHighScore(i, 2)));
+            //textView1.setText(String.format(Locale.getDefault(), "%s %s", scores.getHighScore(i, 0), dollar));
+            //long time = scores.getHighScore(i, 1);
+            //textView2.setText(String.format(Locale.getDefault(), "%02d:%02d:%02d", time / 3600, (time % 3600) / 60, (time % 60)));
+            //textView3.setText(DateFormat.getDateInstance(DateFormat.SHORT).format(scores.getHighScore(i, 2)));
             textView4.setText(new SimpleDateFormat("HH:mm", Locale.getDefault()).format(scores.getHighScore(i, 2)));
 
             tableLayout.addView(row);
@@ -92,10 +99,12 @@ public class HighScoresFragment extends Fragment {
         return view;
     }
 
-    /**
+    */
+/**
      * loads the other shown data
-     */
+     *//*
+
     private void loadData() {
         dollar = currentGame.isPointsInDollar() ? "$" : "";
     }
-}
+}*/

@@ -149,7 +149,7 @@ public class RecordList {
             sounds.playSound(Sounds.names.CARD_RETURN);
 
             if (!prefs.getDisableUndoCosts()) {
-                scores.update(-currentGame.getUndoCosts());
+                //scores.update(-currentGame.getUndoCosts());
             }
 
             entries.get(entries.size() - 1).undo();

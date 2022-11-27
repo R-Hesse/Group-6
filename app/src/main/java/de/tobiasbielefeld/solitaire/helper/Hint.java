@@ -97,7 +97,7 @@ public class Hint extends HelperCardMovement {
         ArrayList<Card> currentCards = new ArrayList<>();
 
         if (counter == 0 && !prefs.getDisableHintCosts()) {
-            scores.update(-currentGame.getHintCosts());
+            //scores.update(-currentGame.getHintCosts());
         }
 
         visited.add(card);
