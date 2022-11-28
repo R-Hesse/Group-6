@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greenBackground"
+    tools:context=".ui.WelcomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:id="@+id/greeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome To Solitaire"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/enterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Enter Your Name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/userInput"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:textAlignment="center"
+            android:hint="Type Here"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/button_name"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Submit" />
+
+
+        <ImageView
+            android:layout_width="480dp"
+            android:layout_height="32dp"
+            android:src="@drawable/googlead"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

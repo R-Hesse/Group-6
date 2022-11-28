@@ -122,7 +122,7 @@ public class Hint extends HelperCardMovement {
 
         if (cardAndStack == null) {
             if (!showedFirstHint) {
-                showToast(gm.getString(R.string.dialog_no_hint_available), gm);
+                // //showToast(gm.getString(R.string.dialog_no_hint_available), gm);
             }
 
             stop();

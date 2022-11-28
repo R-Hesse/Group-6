@@ -139,7 +139,7 @@ public class GameLogic {
         }
 //        } catch (Exception e) {
 //            Log.e(gm.getString(R.string.loading_data_failed), e.toString());
-//            showToast(gm.getString(R.string.game_load_error),gm);
+//            //showToast(gm.getString(R.string.game_load_error),gm);
 //            newGame();
 //        }
 

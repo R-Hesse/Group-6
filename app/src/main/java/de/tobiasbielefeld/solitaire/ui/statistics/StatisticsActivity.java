@@ -60,8 +60,8 @@ public class StatisticsActivity extends CustomAppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_statistics, menu);
+        //MenuInflater inflater = getMenuInflater();
+        //inflater.inflate(R.menu.menu_statistics, menu);
         menu.getItem(1).setChecked(prefs.getSavedStatisticsHideWinPercentage());
 
         return true;
@@ -104,7 +104,7 @@ public class StatisticsActivity extends CustomAppCompatActivity {
         //scores.deleteScores();
         gameLogic.deleteStatistics();
         currentGame.deleteAdditionalStatisticsData();
-        showToast(getString(R.string.statistics_button_deleted_all_entries), this);
+        //showToast(getString(R.string.statistics_button_deleted_all_entries), this);
 
         finish();
         startActivity(getIntent());

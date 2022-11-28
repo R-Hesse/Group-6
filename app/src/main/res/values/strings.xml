@@ -69,7 +69,7 @@
 <string name="dialog_start_new_game_text">"Your current progress will be lost and a new random game will be dealt."</string>
 
 <!-- dialog redeal -->
-<string name="dialog_redeal_title">"Give cards again"</string>
+<string name="dialog_redeal_title">"Re-shuffle Cards"</string>
 <string name="dialog_redeal_text">"Your current progress will be lost, but the cards are dealt like in the current game."</string>
 
 <!-- If you want to help with translations, please use this site: https://poeditor.com/join/project/PYX4vcwTjA -->
@@ -716,5 +716,6 @@ Press on the main stack to deal one card to every tableau stack at once."</strin
 <string name="manual_Maze_scoring">"Each pair of adjacent (ignoring gaps) cards in the correct order: 25"</string>
  <string name="Solitaire">Solitaire</string>
     <string name="games_OneCardDraw">OneCardDraw</string>
+ <string name="welcome">Welcome %s! Let\'s Play</string>
 
 </resources>

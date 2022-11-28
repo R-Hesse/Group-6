@@ -99,7 +99,7 @@ public class SharedData {
     public static boolean stopUiUpdates = false;
     public static boolean isDialogVisible = false;
 
-    private static Toast toast;
+   // private static Toast toast;
 
     /**
      * Reload the needed data. Because if the android device runs out of memory, the app gets
@@ -333,15 +333,15 @@ public class SharedData {
      *
      * @param text The text to show
      */
-    @SuppressLint("ShowToast")
-    public static void showToast(String text, Context context) {
-        if (toast == null) {
-            toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
-        } else
-            toast.setText(text);
-
-        toast.show();
-    }
+//    @SuppressLint("//showToast")
+//    public static void //showToast(String text, Context context) {
+//        if (toast == null) {
+//            toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
+//        } else
+//            toast.setText(text);
+//
+//        toast.show();
+//    }
 
     /**
      * Uses the given string array to create a text paragraph. The strings are separated by bullet

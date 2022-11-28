@@ -66,29 +66,29 @@ public class Manual extends CustomAppCompatActivity
         setContentView(isLargeTablet(getApplicationContext()) ? R.layout.activity_manual_xlarge : R.layout.activity_manual);
 
         drawer = findViewById(R.id.drawer_layout);
-        listView = findViewById(R.id.manual_listView);
+       // listView = findViewById(R.id.manual_listView);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
         fragmentLoaded = false;
 
         loadFragment(ManualStartPage.class);
 
         if (drawer != null) {
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
             drawer.setDrawerListener(toggle);
             toggle.syncState();
-            navigationView = findViewById(R.id.nav_view);
-            navigationView.setNavigationItemSelectedListener(this);
-            navigationView.setCheckedItem(R.id.nav_startpage);
+           // navigationView = findViewById(R.id.nav_view);
+            //navigationView.setNavigationItemSelectedListener(this);
+            //navigationView.setCheckedItem(R.id.nav_startpage);
         } else if (listView != null) {
             if (getSupportActionBar() != null) {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             }
 
-            listView.setOnItemClickListener(this);
+          //  listView.setOnItemClickListener(this);
 
-            listView.post(() -> checkMenuItem(0));
+         //   listView.post(() -> checkMenuItem(0));
         }
 
         //if the manual is called from the in game menu, show the corresponding game rule page

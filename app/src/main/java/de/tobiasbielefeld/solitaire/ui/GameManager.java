@@ -203,7 +203,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
             layoutGame.addView(cards[i].view);
         }
 
-        updateMenuBar();
+        //updateMenuBar();
         loadBackgroundColor();
         setUiElementsColor();
 

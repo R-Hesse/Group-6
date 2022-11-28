@@ -36,7 +36,7 @@ import de.tobiasbielefeld.solitaire.classes.CustomDialogPreference;
 
 import static android.content.Context.MODE_PRIVATE;
 import static de.tobiasbielefeld.solitaire.SharedData.lg;
-import static de.tobiasbielefeld.solitaire.SharedData.showToast;
+//import static de.tobiasbielefeld.solitaire.SharedData.//showToast;
 import static de.tobiasbielefeld.solitaire.helper.Preferences.PREF_KEY_ENSURE_MOVABILITY_MIN_MOVES;
 
 /*
@@ -124,7 +124,7 @@ public class DialogPreferenceEnsureMovabilityMinMoves
                     }
 
                     if (numbers[i] < 0) {
-                        showToast(getContext().getString(R.string.settings_number_input_error), getContext());
+                        ////showToast(getContext().getString(R.string.settings_number_input_error), getContext());
                         return;
                     }
                 }
@@ -133,7 +133,7 @@ public class DialogPreferenceEnsureMovabilityMinMoves
                     sharedPrefList.get(i).edit().putInt(PREF_KEY_ENSURE_MOVABILITY_MIN_MOVES, numbers[i]).apply();
                 }
             } catch (Exception e) {
-                showToast(getContext().getString(R.string.settings_number_input_error), getContext());
+               // //showToast(getContext().getString(R.string.settings_number_input_error), getContext());
             }
         }
     }

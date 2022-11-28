@@ -91,27 +91,27 @@ public class SettingsGames extends AppCompatPreferenceActivity {
      */
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals(PREF_KEY_KLONDIKE_DRAW)) {
-            showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Klondike)), this);
+            //showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Klondike)), this);
 
         } else if (key.equals(PREF_KEY_VEGAS_DRAW)) {
-            showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Vegas)), this);
+            //showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Vegas)), this);
 
         } else if (key.equals(PREF_KEY_CANFIELD_DRAW)) {
-            showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Canfield)), this);
+            //showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Canfield)), this);
 
         } else if (key.equals(PREF_KEY_SPIDER_DIFFICULTY)) {
-            showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Spider)), this);
+            //showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Spider)), this);
 
         } else if (key.equals(PREF_KEY_SPIDERETTE_DIFFICULTY)) {
-            showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Spiderette)), this);
+            //showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Spiderette)), this);
 
         } else if (key.equals(PREF_KEY_YUKON_RULES)) {
-            showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Yukon)), this);
+            //showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Yukon)), this);
             
 
         } else if (key.equals(PREF_KEY_VEGAS_BET_AMOUNT) || key.equals(PREF_KEY_VEGAS_WIN_AMOUNT)) {
             updatePreferenceVegasBetAmountSummary();
-            showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Vegas)), this);
+            //showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Vegas)), this);
 
         } else if (key.equals(PREF_KEY_VEGAS_MONEY_ENABLED)) {
             if (!prefs.getSavedVegasSaveMoneyEnabled()) {
@@ -129,7 +129,7 @@ public class SettingsGames extends AppCompatPreferenceActivity {
             }
 
         } else if (key.equals(PREF_KEY_CALCULATION_ALTERNATIVE)) {
-            //showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Calculation)), this);
+            ////showToast(String.format(getString(R.string.settings_restart_game), getString(R.string.games_Calculation)), this);
         }
     }
 

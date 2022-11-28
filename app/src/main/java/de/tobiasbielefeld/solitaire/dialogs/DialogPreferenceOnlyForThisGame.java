@@ -143,7 +143,7 @@ public class DialogPreferenceOnlyForThisGame extends CustomDialogPreference {
                 }
 
                 ((Settings) getContext()).hidePreferenceOnlyForThisGame();
-                showToast(context.getString(R.string.settings_dialog_only_for_this_game_removed_all), context);
+                ////showToast(context.getString(R.string.settings_dialog_only_for_this_game_removed_all), context);
             }
         }
 

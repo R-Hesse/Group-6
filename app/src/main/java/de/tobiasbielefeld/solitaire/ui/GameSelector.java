@@ -3,6 +3,7 @@ package de.tobiasbielefeld.solitaire.ui;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -18,14 +19,16 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
+import de.tobiasbielefeld.solitaire.ui.WelcomeActivity.*;
+
+
+import de.tobiasbielefeld.solitaire.ui.*;
 
 import java.util.ArrayList;
 
 import de.tobiasbielefeld.solitaire.R;
 import de.tobiasbielefeld.solitaire.classes.CustomAppCompatActivity;
-import de.tobiasbielefeld.solitaire.ui.about.AboutActivity;
-import de.tobiasbielefeld.solitaire.ui.manual.Manual;
-import de.tobiasbielefeld.solitaire.ui.settings.Settings;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 import static de.tobiasbielefeld.solitaire.helper.Preferences.*;
@@ -35,14 +38,17 @@ public class GameSelector extends CustomAppCompatActivity
 
     private TableLayout tableLayout;
     private int menuColumns;
+    String PREF_FILE_NAME = "shared_prefs";
+    SharedPreferences namePrefs;
+
     private ArrayList<Integer> indexes = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_selector);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setItemIconTintList(null);
+        //NavigationView navigationView = findViewById(R.id.nav_view);
+        //navigationView.setItemIconTintList(null);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -52,10 +58,21 @@ public class GameSelector extends CustomAppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        //navigationView = findViewById(R.id.nav_view);
+        //navigationView.setNavigationItemSelectedListener(this);
 
         tableLayout = findViewById(R.id.tableLayoutGameChooser);
+
+        // Grabs Typed Name
+
+        String namePref = this.getSharedPreferences(PREF_FILE_NAME, MODE_PRIVATE)
+                .getString("typed", "Name");
+
+
+        // Sets Name in TextView
+
+        TextView welcome = findViewById(R.id.welcome);
+        welcome.setText(getString(R.string.welcome, namePref));
 
         if (!prefs.getSavedStartWithMenu()) {
             int savedGame = prefs.getSavedCurrentGame();
@@ -83,24 +100,25 @@ public class GameSelector extends CustomAppCompatActivity
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
-        switch (item.getItemId()) {
-            case R.id.item_settings:
-                startActivity(new Intent(getApplicationContext(), Settings.class));
-                break;
-            case R.id.item_manual:
-                startActivity(new Intent(getApplicationContext(), Manual.class));
-                break;
-            case R.id.item_about:
-                startActivity(new Intent(getApplicationContext(), AboutActivity.class));
-                break;
-            case R.id.item_close:
-                finish();
-                break;
-        }
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
+//        switch (item.getItemId()) {
+//            case R.id.item_settings:
+//                startActivity(new Intent(getApplicationContext(), Settings.class));
+//                break;
+//            case R.id.item_manual:
+//                startActivity(new Intent(getApplicationContext(), Manual.class));
+//                break;
+//            case R.id.item_about:
+//                startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+//                break;
+//            case R.id.item_close:
+//                finish();
+//                break;
+//        }
+//
+//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+//        drawer.closeDrawer(GravityCompat.START);
+//        return true;
+        return false;
     }
 
     /**

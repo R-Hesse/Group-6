@@ -59,13 +59,13 @@ public class DialogPreferenceMaxNumberUndos extends CustomDialogPreference {
             try {
                 //Saving zero would cause force closes, so just catch it here
                 if (Integer.parseInt(input.getText().toString()) < 1) {
-                    showToast(getContext().getString(R.string.settings_number_input_error), getContext());
+                    ////showToast(getContext().getString(R.string.settings_number_input_error), getContext());
                     return;
                 }
 
                 prefs.saveMaxNumberUndos(Integer.parseInt(input.getText().toString()));
             } catch (Exception e) {
-                showToast(getContext().getString(R.string.settings_number_input_error), getContext());
+               // //showToast(getContext().getString(R.string.settings_number_input_error), getContext());
             }
         }
     }

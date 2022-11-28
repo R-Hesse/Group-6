@@ -68,7 +68,7 @@ public class DialogInGameHelpMenu extends CustomDialogFragment {
                                         currentGame.mixCards();
                                     }
                                 } else {
-                                    showToast(getString(R.string.dialog_mix_cards_not_available), getActivity());
+                                    ////showToast(getString(R.string.dialog_mix_cards_not_available), getActivity());
                                 }
                             }
                             break;

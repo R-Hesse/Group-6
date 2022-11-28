@@ -107,7 +107,7 @@ public class AutoMove extends HelperCardMovement {
                 }
             } else {
                 if (!movedFirstCard) {
-                    showToast(gm.getString(R.string.dialog_no_movement_possible), gm);
+                    // //showToast(gm.getString(R.string.dialog_no_movement_possible), gm);
                 }
 
                 stop();
