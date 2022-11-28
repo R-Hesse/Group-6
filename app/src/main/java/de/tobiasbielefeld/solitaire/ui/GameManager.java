@@ -468,13 +468,13 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
                 if (prefs.getSavedDoubleTapEnabled() && tapped.getStack() == cards[v.getId()].getStack()
                         && System.currentTimeMillis() - firstTapTime < DOUBLE_TAP_SPEED) {
 
-                    boolean result = doubleTapCalculation(event.getX(), event.getY());
+                    /*boolean result = doubleTapCalculation(event.getX(), event.getY());
 
                     //do not directly return from double tap calculation, addCardToMovementTest()
                     // needs to run in case the calculation returns false
                     if (result) {
                         return true;
-                    }
+                    }*/
                 }
                 //tap to select
                 else if (prefs.getSavedTapToSelectEnabled()
@@ -507,7 +507,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
         return true;
     }
 
-    private boolean doubleTapCalculation(float X, float Y) {
+    /*private boolean doubleTapCalculation(float X, float Y) {
         CardAndStack cardAndStack = null;
 
         if (prefs.getSavedDoubleTapAllCards() && tapped.getStackId() <= currentGame.getLastTableauId()) {
@@ -531,7 +531,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
         }
 
         return false;
-    }
+    }*/
 
     /**
      * Moves card for drag-and-drop movements, but only if the touch point left the area of the initial
@@ -575,13 +575,13 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
 
             return resetTappedCard();
         } else if (prefs.getSingleTapAllGames()) {
-            boolean result = doubleTapCalculation(X, Y);
+            //boolean result = doubleTapCalculation(X, Y);
 
             //do not directly return from double tap calculation, movingCards.returnToPos()
             // needs to run in case the calculation returns false
-            if (result) {
+            /*if (result) {
                 return true;
-            }
+            }*/
         } else if (currentGame.isSingleTapEnabled() && tapped.getCard().test(currentGame.getDiscardStack())) {
             movingCards.moveToDestination(currentGame.getDiscardStack());
             return resetTappedCard();
