@@ -125,12 +125,20 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
             android:background="#000000" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        >
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="666dp"
-            android:foregroundGravity="bottom"
+            android:layout_height="50dp"
+
             android:src="@drawable/googlead" />
+
+    </LinearLayout>
+
 
     </RelativeLayout>
 
