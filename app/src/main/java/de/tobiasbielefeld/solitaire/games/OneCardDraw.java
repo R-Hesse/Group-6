@@ -52,7 +52,7 @@ public class OneCardDraw extends Game {
         setDiscardStackIDs(11, 12, 13);
         setMainStackIDs(14);
 
-        //1 stands for Klondike, 2 for Vegas
+        //1 stands for 1 Card Draw
         whichGame = 1;
 
         setMixingCardsTestMode(testMode.ALTERNATING_COLOR);

@@ -27,11 +27,6 @@ import java.util.List;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 
-/**
- * Contains everything related to cards. The view is a custom image view, which overrides some
- * methods for animations. The drawable files are also updated here
- */
-
 public class Card {
 
     public enum movements {INSTANT, NONE, DEFAULT}
@@ -49,24 +44,14 @@ public class Card {
     private PointF oldLocation = new PointF();            //old location so cards can be moved back if they can't placed on a new stack
 
     public static int ACE = 1;
-    public static int JOKER = 11;
+    public static int JACK = 11;
     public static int QUEEN = 12;
     public static int KING = 13;
 
-    //no enum, I want to explicitly set the values, because they are saved in the sharedPref and
     private static final int STATE_FACED_DOWN = 0;
     public static final int STATE_FACED_UP = 1;
     public static final int STATE_INVISIBLE = 2;
 
-    /**
-     * Sets id, color and value. The cards are initialized at game start with a for loop.
-     * <p>
-     * The color range is 1 to 4 and depends on the cardDrawableOrder, which is set to
-     * 1 for the first 13 cards, 2 for the following 13 cards and so on.
-     * After 52 cards (= one deck) it repeats. The value range is from 1 to 13 (= Ace to King).
-     *
-     * @param id The position in the cards array
-     */
     public Card(int id) {
         this.id = id;
         color = currentGame.cardDrawablesOrder[(id % 52) / 13];
