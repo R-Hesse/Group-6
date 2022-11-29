@@ -24,7 +24,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
-import de.tobiasbielefeld.solitaire.handler.HandlerStopBackgroundMusic;
+//import de.tobiasbielefeld.solitaire.handler.HandlerStopBackgroundMusic;
 import de.tobiasbielefeld.solitaire.helper.LocaleChanger;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
@@ -37,7 +37,7 @@ import static de.tobiasbielefeld.solitaire.SharedData.*;
 
 public class CustomAppCompatActivity extends AppCompatActivity {
 
-    HandlerStopBackgroundMusic handlerStopBackgroundMusic = new HandlerStopBackgroundMusic();
+    //HandlerStopBackgroundMusic handlerStopBackgroundMusic = new HandlerStopBackgroundMusic();
 
     /**
      * Sets the screen orientation according to the settings. It is called from onResume()
@@ -81,7 +81,7 @@ public class CustomAppCompatActivity extends AppCompatActivity {
         setOrientation();
         showOrHideStatusBar();
 
-        backgroundSound.doInBackground(this);
+        //backgroundSound.doInBackground(this);
         activityCounter++;
     }
 
@@ -95,7 +95,7 @@ public class CustomAppCompatActivity extends AppCompatActivity {
         super.onPause();
 
         activityCounter--;
-        handlerStopBackgroundMusic.sendEmptyMessageDelayed(0, 100);
+        //handlerStopBackgroundMusic.sendEmptyMessageDelayed(0, 100);
     }
 
     /**

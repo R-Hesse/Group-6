@@ -146,7 +146,7 @@ public class RecordList {
     public void undo() {
         if (!entries.isEmpty()) {
             isWorking = true;
-            sounds.playSound(Sounds.names.CARD_RETURN);
+            //sounds.playSound(Sounds.names.CARD_RETURN);
 
             if (!prefs.getDisableUndoCosts()) {
                 //scores.update(-currentGame.getUndoCosts());
@@ -218,9 +218,9 @@ public class RecordList {
             isWorking = false;
 
             //check if the undo movement makes autocomplete undoable
-            if (autoComplete.buttonIsShown() && !currentGame.autoCompleteStartTest()) {
+            /*if (autoComplete.buttonIsShown() && !currentGame.autoCompleteStartTest()) {
                 autoComplete.hideButton();
-            }
+            }*/
 
             currentGame.afterUndo();
             return false;

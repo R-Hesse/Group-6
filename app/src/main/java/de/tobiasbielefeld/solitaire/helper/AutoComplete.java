@@ -16,7 +16,7 @@
  * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
  */
 
-package de.tobiasbielefeld.solitaire.helper;
+/*package de.tobiasbielefeld.solitaire.helper;
 
 import android.os.Bundle;
 import android.view.View;
@@ -31,12 +31,12 @@ import de.tobiasbielefeld.solitaire.ui.GameManager;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 
-/**
+*//**
  * if the last card on the tableau is flipped up, the auto complete can be run. it simply test
  * every card from the tableau and the stock if they can be placed on the foundation.
  * it continues until the last card was moved to the foundation. after that,
  * the win animation will be started
- */
+ *//*
 
 public class AutoComplete extends HelperCardMovement {
 
@@ -84,7 +84,7 @@ public class AutoComplete extends HelperCardMovement {
         buttonShown = true;
 
         if (!withoutMovement) {
-            sounds.playSound(Sounds.names.SHOW_AUTOCOMPLETE);
+            //sounds.playSound(Sounds.names.SHOW_AUTOCOMPLETE);
             animate.showAutoCompleteButton();
         } else {
             gm.buttonAutoComplete.setVisibility(View.VISIBLE);
@@ -129,7 +129,7 @@ public class AutoComplete extends HelperCardMovement {
                 cards.add(cardAndStack.getCard().getStack().getCard(i));
             }
 
-            sounds.playSound(Sounds.names.CARD_SET);
+            //sounds.playSound(Sounds.names.CARD_SET);
             moveToStack(cards, cardAndStack.getStack());
 
 
@@ -153,7 +153,7 @@ public class AutoComplete extends HelperCardMovement {
             card.removeFromCurrentStack();
             destination.addCard(card);
             card.bringToFront();
-            sounds.playSound(Sounds.names.CARD_SET);
+            //sounds.playSound(Sounds.names.CARD_SET);
             card.setLocation(destination.getX(), destination.getY());
 
             //start the next handler in some milliseconds
@@ -173,4 +173,4 @@ public class AutoComplete extends HelperCardMovement {
         return animate.cardIsAnimating() && (phase == 1 || isFinished);
     }
 
-}
+}*/

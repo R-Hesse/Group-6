@@ -312,7 +312,7 @@ public class Card {
             return true;
         }
 
-        return !((!isUp() || (destination.getSize() != 0 && !destination.getTopCard().isUp())) && !autoComplete.isRunning()) && currentGame.cardTest(destination, this);
+        return !((!isUp() || (destination.getSize() != 0 && !destination.getTopCard().isUp())) ) && currentGame.cardTest(destination, this);
     }
 
     public int getColor() {

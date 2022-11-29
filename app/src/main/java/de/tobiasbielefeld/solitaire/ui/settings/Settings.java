@@ -48,7 +48,7 @@ import de.tobiasbielefeld.solitaire.dialogs.DialogPreferenceCardBackground;
 import de.tobiasbielefeld.solitaire.dialogs.DialogPreferenceCards;
 import de.tobiasbielefeld.solitaire.dialogs.DialogPreferenceOnlyForThisGame;
 import de.tobiasbielefeld.solitaire.dialogs.DialogPreferenceTextColor;
-import de.tobiasbielefeld.solitaire.helper.Sounds;
+//import de.tobiasbielefeld.solitaire.helper.Sounds;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 import static de.tobiasbielefeld.solitaire.helper.Preferences.*;
@@ -85,7 +85,7 @@ public class Settings extends AppCompatPreferenceActivity {
 
     CustomizationPreferenceFragment customizationPreferenceFragment;
 
-    private Sounds settingsSounds;
+    //private Sounds settingsSounds;
 
     //make this static so the preference fragments use the same intent
     //don't forget: Android 8 doesn't call onCreate for the fragments, so there only one intent is
@@ -106,7 +106,7 @@ public class Settings extends AppCompatPreferenceActivity {
 
         prefs.setCriticalSettings();
 
-        settingsSounds = new Sounds(this);
+        //settingsSounds = new Sounds(this);
 
         if (returnIntent == null) {
             returnIntent = new Intent();
@@ -215,13 +215,6 @@ public class Settings extends AppCompatPreferenceActivity {
             if (animate != null) {
                 animate.updateMovementSpeed();
             }
-        } else if (key.equals(PREF_KEY_WIN_SOUND)) {
-            settingsSounds.playWinSound();
-        } else if (key.equals(PREF_KEY_BACKGROUND_MUSIC) || key.equals(PREF_KEY_SOUND_ENABLED)) {
-            backgroundSound.doInBackground(this);
-        } else if (key.equals(PREF_KEY_BACKGROUND_VOLUME)) {
-            updatePreferenceBackgroundVolumeSummary();
-            backgroundSound.doInBackground(this);
         } else if (key.equals(PREF_KEY_FORCE_TABLET_LAYOUT)) {
             restartApplication();
         } else if (key.equals(PREF_KEY_SINGLE_TAP_ALL_GAMES)) {

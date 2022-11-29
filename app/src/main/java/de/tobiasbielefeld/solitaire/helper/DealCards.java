@@ -53,7 +53,7 @@ public class DealCards extends HelperCardMovement {
         switch (phase) {
             case 1:
                 currentGame.dealNewGame();
-                sounds.playSound(Sounds.names.DEAL_CARDS);
+                //sounds.playSound(Sounds.names.DEAL_CARDS);
                 phase = 2;
                 nextIteration();
                 break;

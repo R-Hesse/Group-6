@@ -16,6 +16,7 @@
  * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
  */
 
+/*
 package de.tobiasbielefeld.solitaire.helper;
 
 import android.content.Context;
@@ -28,9 +29,11 @@ import static de.tobiasbielefeld.solitaire.SharedData.*;
 import static de.tobiasbielefeld.solitaire.helper.BackgroundMusic.status.*;
 
 
+*/
 /**
  * Manages the background music. Will be played in the whole application.
- */
+ *//*
+
 
 public class BackgroundMusic extends AsyncTask<Context, Void, Void> {
 
@@ -140,4 +143,4 @@ public class BackgroundMusic extends AsyncTask<Context, Void, Void> {
         currentStatus = playing;
     }
 
-}
+}*/

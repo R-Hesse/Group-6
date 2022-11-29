@@ -102,7 +102,7 @@ public class MovingCards {
      */
     public void moveToDestination(Stack destination) {
         gameLogic.checkFirstMovement();
-        sounds.playSound(Sounds.names.CARD_SET);
+        //sounds.playSound(Sounds.names.CARD_SET);
 
         Stack origin = currentCards.get(0).getStack();
 
@@ -113,7 +113,7 @@ public class MovingCards {
         }
 
         currentCards.clear();
-        gameLogic.checkForAutoCompleteButton(false);
+        //gameLogic.checkForAutoCompleteButton(false);
     }
 
     /**

@@ -128,7 +128,7 @@ public class Hint extends HelperCardMovement {
             stop();
         } else {
             if (!showedFirstHint) {
-                sounds.playSound(Sounds.names.HINT);
+                //sounds.playSound(Sounds.names.HINT);
                 showedFirstHint = true;
 
                 int amount = prefs.getSavedTotalHintsShown() + 1;

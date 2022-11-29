@@ -96,11 +96,11 @@ public class GameLogic {
         Card.updateCardDrawableChoice();
         Card.updateCardBackgroundChoice();
         animate.reset();
-        autoComplete.hideButton();
+        //autoComplete.hideButton();
 
 
         if (!withoutMovement) {
-            sounds.playSound(Sounds.names.DEAL_CARDS);
+            //sounds.playSound(Sounds.names.DEAL_CARDS);
 
             for (Card card : cards) {
                 card.setLocationWithoutMovement(currentGame.getDealStack().getX(), currentGame.getDealStack().getY());
@@ -131,7 +131,7 @@ public class GameLogic {
 
             loadRandomCards();
 
-            checkForAutoCompleteButton(withoutMovement);
+            //checkForAutoCompleteButton(withoutMovement);
 
             //load game dependent data
             currentGame.load();
@@ -146,11 +146,11 @@ public class GameLogic {
         gm.hasLoaded = true;
     }
 
-    public void checkForAutoCompleteButton(boolean withoutMovement) {
+    /*public void checkForAutoCompleteButton(boolean withoutMovement) {
         if (!prefs.getHideAutoCompleteButton() && !autoComplete.buttonIsShown() && currentGame.autoCompleteStartTest() && !hasWon()) {
             autoComplete.showButton(withoutMovement);
         }
-    }
+    }*/
 
     public void newGameForEnsureMovability() {
         System.arraycopy(cards, 0, randomCards, 0, cards.length);
@@ -216,7 +216,7 @@ public class GameLogic {
         movingCards.reset();
         recordList.reset();
         //timer.reset();
-        autoComplete.hideButton();
+        //autoComplete.hideButton();
 
         for (Stack stack : stacks) {
             stack.reset();
@@ -252,14 +252,14 @@ public class GameLogic {
      * is reseted, so the player can't revert card movements after the animation
      */
     public void testIfWon() {
-        if (!won && !autoComplete.isRunning() && ((prefs.isDeveloperOptionInstantWinEnabled() && movedFirstCard) || currentGame.winTest())) {
+        if (!won && ((prefs.isDeveloperOptionInstantWinEnabled() && movedFirstCard) || currentGame.winTest())) {
             incrementPlayedGames();
             incrementNumberWonGames();
             //scores.updateBonus();
             //scores.addNewScore(movedFirstCard);
             recordList.reset();
             //timer.setWinningTime();
-            autoComplete.hideButton();
+            //autoComplete.hideButton();
             animate.winAnimation();
             won = true;
             currentGame.onGameEnd();
@@ -395,7 +395,7 @@ public class GameLogic {
      * @return True if no movement is allowed, false otherwise
      */
     public boolean stopConditions() {
-        return (autoComplete.isRunning() || animate.cardIsAnimating() || hint.isRunning()
+        return (animate.cardIsAnimating() || hint.isRunning()
                 || recordList.isWorking() || autoMove.isRunning() || isDialogVisible);
     }
 }

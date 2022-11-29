@@ -34,7 +34,7 @@ import de.tobiasbielefeld.solitaire.classes.Card;
 import de.tobiasbielefeld.solitaire.classes.CardAndStack;
 import de.tobiasbielefeld.solitaire.classes.Stack;
 import de.tobiasbielefeld.solitaire.helper.RecordList;
-import de.tobiasbielefeld.solitaire.helper.Sounds;
+//import de.tobiasbielefeld.solitaire.helper.Sounds;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 import static de.tobiasbielefeld.solitaire.games.Game.testMode2.*;
@@ -124,7 +124,7 @@ public abstract class Game {
             cardToChange.getStack().exchangeCard(cardToChange, cardsToMix.get(i));
         }
 
-        sounds.playSound(Sounds.names.DEAL_CARDS);
+        //sounds.playSound(Sounds.names.DEAL_CARDS);
 
         //After every card got a new place, update the card image views
         for (Stack stack : stacks) {
@@ -329,7 +329,7 @@ public abstract class Game {
 
         int sound = onMainStackTouch();
 
-        switch (sound) {
+        /*switch (sound) {
             case 1:     //single card moved
                 sounds.playSound(Sounds.names.CARD_SET);
                 break;
@@ -338,7 +338,7 @@ public abstract class Game {
                 break;
             default:    //no cards moved
                 break;
-        }
+        }*/
 
         return sound;
     }

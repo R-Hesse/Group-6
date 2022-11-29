@@ -16,6 +16,7 @@
  * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
  */
 
+/*
 package de.tobiasbielefeld.solitaire.handler;
 
 import android.os.Handler;
@@ -23,11 +24,13 @@ import android.os.Message;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 
+*/
 /**
  * Check here if the application is closed. If the activityCounter reaches zero, no activity
  * is in the foreground so stop the background music. But try stopping some milliseconds delayed,
  * because otherwise the music would stop/restart between the activities
- */
+ *//*
+
 
 public class HandlerStopBackgroundMusic extends Handler {
 
@@ -39,4 +42,4 @@ public class HandlerStopBackgroundMusic extends Handler {
             backgroundSound.pausePlaying();
         }
     }
-}
+}*/

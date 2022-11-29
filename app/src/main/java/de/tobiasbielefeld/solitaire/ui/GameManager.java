@@ -50,7 +50,7 @@ import de.tobiasbielefeld.solitaire.dialogs.DialogInGameMenu;
 import de.tobiasbielefeld.solitaire.dialogs.DialogWon;
 import de.tobiasbielefeld.solitaire.handler.HandlerLoadGame;
 import de.tobiasbielefeld.solitaire.helper.Animate;
-import de.tobiasbielefeld.solitaire.helper.AutoComplete;
+//import de.tobiasbielefeld.solitaire.helper.AutoComplete;
 import de.tobiasbielefeld.solitaire.helper.AutoMove;
 import de.tobiasbielefeld.solitaire.helper.DealCards;
 import de.tobiasbielefeld.solitaire.helper.EnsureMovability;
@@ -58,7 +58,7 @@ import de.tobiasbielefeld.solitaire.helper.GameLogic;
 import de.tobiasbielefeld.solitaire.helper.Hint;
 import de.tobiasbielefeld.solitaire.helper.RecordList;
 //import de.tobiasbielefeld.solitaire.helper.Scores;
-import de.tobiasbielefeld.solitaire.helper.Sounds;
+//import de.tobiasbielefeld.solitaire.helper.Sounds;
 //import de.tobiasbielefeld.solitaire.helper.Timer;
 import de.tobiasbielefeld.solitaire.ui.settings.Settings;
 import de.tobiasbielefeld.solitaire.ui.statistics.StatisticsActivity;
@@ -122,9 +122,9 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
         //scores = new Scores(gm);
         gameLogic = new GameLogic(gm);
         animate = new Animate(gm);
-        autoComplete = new AutoComplete(gm);
+        //autoComplete = new AutoComplete(gm);
         //timer = new Timer(gm);
-        sounds = new Sounds(gm);
+        //sounds = new Sounds(gm);
         dealCards = new DealCards(gm);
         ensureMovability = new EnsureMovability();
 
@@ -153,9 +153,9 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
 
                 handlerTestIfWon.sendDelayed();
 
-                if (!autoComplete.isRunning() && !gameLogic.hasWon()) {
+                /*if (!autoComplete.isRunning() && !gameLogic.hasWon()) {
                     gameLogic.checkForAutoCompleteButton(false);
-                }
+                }*/
             }
 
             @Override
@@ -254,7 +254,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
                         }
 
                         ensureMovability.loadInstanceState(savedInstanceState);
-                        autoComplete.loadInstanceState(savedInstanceState);
+                        //autoComplete.loadInstanceState(savedInstanceState);
                         autoMove.loadInstanceState(savedInstanceState);
                         hint.loadInstanceState(savedInstanceState);
                         dealCards.loadInstanceState(savedInstanceState);
@@ -330,7 +330,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
             gameLogic.save();
         }
 
-        autoComplete.pause();
+        //autoComplete.pause();
         autoMove.pause();
         hint.pause();
         ensureMovability.pause();
@@ -346,7 +346,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
         outState.putBoolean(getString(R.string.bundle_reload_game), true);
         outState.putInt(GAME, getIntent().getIntExtra(GAME, -1));
 
-        autoComplete.saveInstanceState(outState);
+        //autoComplete.saveInstanceState(outState);
         autoMove.saveInstanceState(outState);
         hint.saveInstanceState(outState);
         ensureMovability.saveInstanceState(outState);
@@ -361,7 +361,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
         activityPaused = false;
 
         //timer.load();
-        autoComplete.resume();
+        //autoComplete.resume();
         autoMove.resume();
         hint.resume();
         ensureMovability.resume();
@@ -442,7 +442,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
                 return true;
             }
 
-            gameLogic.checkForAutoCompleteButton(false);
+            //gameLogic.checkForAutoCompleteButton(false);
             handlerTestAfterMove.sendDelayed();
             return resetTappedCard();
         }
@@ -845,9 +845,9 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
                 Intent i = new Intent(this, Settings.class);
                 startActivityForResult(i, 1);
                 break;
-            case R.id.buttonMainAutoComplete:   //start auto complete
-                autoComplete.start();
-                break;
+            //case R.id.buttonMainAutoComplete:   //start auto complete
+                //autoComplete.start();
+                //break;
         }
     }
 

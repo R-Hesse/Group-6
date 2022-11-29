@@ -1,6 +1,6 @@
 package de.tobiasbielefeld.solitaire.helper;
 
-import android.annotation.TargetApi;
+/*import android.annotation.TargetApi;
 import android.content.Context;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
@@ -12,9 +12,9 @@ import de.tobiasbielefeld.solitaire.SharedData;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 
-/**
+*//**
  * Created by tobias on 25.07.17.
- */
+ *//*
 
 public class Sounds {
 
@@ -105,4 +105,4 @@ public class Sounds {
         sp = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
     }
 
-}
+}*/

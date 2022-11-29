@@ -36,9 +36,9 @@ import de.tobiasbielefeld.solitaire.classes.Stack;
 import de.tobiasbielefeld.solitaire.classes.WaitForAnimationHandler;
 import de.tobiasbielefeld.solitaire.games.Game;
 import de.tobiasbielefeld.solitaire.helper.Animate;
-import de.tobiasbielefeld.solitaire.helper.AutoComplete;
+//import de.tobiasbielefeld.solitaire.helper.AutoComplete;
 import de.tobiasbielefeld.solitaire.helper.AutoMove;
-import de.tobiasbielefeld.solitaire.helper.BackgroundMusic;
+//import de.tobiasbielefeld.solitaire.helper.BackgroundMusic;
 import de.tobiasbielefeld.solitaire.helper.Bitmaps;
 import de.tobiasbielefeld.solitaire.helper.CardHighlight;
 import de.tobiasbielefeld.solitaire.helper.DealCards;
@@ -49,7 +49,7 @@ import de.tobiasbielefeld.solitaire.helper.MovingCards;
 import de.tobiasbielefeld.solitaire.helper.Preferences;
 import de.tobiasbielefeld.solitaire.helper.RecordList;
 //import de.tobiasbielefeld.solitaire.helper.Scores;
-import de.tobiasbielefeld.solitaire.helper.Sounds;
+//import de.tobiasbielefeld.solitaire.helper.Sounds;
 //import de.tobiasbielefeld.solitaire.helper.Timer;
 
 /**
@@ -77,9 +77,9 @@ public class SharedData {
     public static GameLogic gameLogic;
     public static Animate animate;
 
-    public static AutoComplete autoComplete;
+    //public static AutoComplete autoComplete;
     //public static Timer timer;
-    public static Sounds sounds;
+    //public static Sounds sounds;
     public static RecordList recordList;
     public static AutoMove autoMove;
     public static Hint hint;
@@ -92,7 +92,7 @@ public class SharedData {
     public static LoadGame lg = new LoadGame();
     public static Bitmaps bitmaps = new Bitmaps();
     public static CardHighlight cardHighlight = new CardHighlight();
-    public static BackgroundMusic backgroundSound = new BackgroundMusic();
+    //public static BackgroundMusic backgroundSound = new BackgroundMusic();
     public static EnsureMovability ensureMovability;
 
     public static int activityCounter = 0;

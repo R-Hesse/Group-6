@@ -92,7 +92,7 @@ public class Animate {
             moveCardSlow(card, posX, posY);
         }
 
-        sounds.playWinSound();
+        //sounds.playWinSound();
         handlerAfterWon.sendDelayed();
     }
 

@@ -17,7 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
-import de.tobiasbielefeld.solitaire.handler.HandlerStopBackgroundMusic;
+//import de.tobiasbielefeld.solitaire.handler.HandlerStopBackgroundMusic;
 import de.tobiasbielefeld.solitaire.helper.LocaleChanger;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
@@ -33,7 +33,7 @@ public abstract class AppCompatPreferenceActivity extends PreferenceActivity
         implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     private AppCompatDelegate mDelegate;
-    HandlerStopBackgroundMusic handlerStopBackgroundMusic = new HandlerStopBackgroundMusic();
+    //HandlerStopBackgroundMusic handlerStopBackgroundMusic = new HandlerStopBackgroundMusic();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,7 +91,7 @@ public abstract class AppCompatPreferenceActivity extends PreferenceActivity
         setOrientation();
 
         activityCounter++;
-        backgroundSound.doInBackground(this);
+        //backgroundSound.doInBackground(this);
     }
 
     @Override
@@ -118,7 +118,7 @@ public abstract class AppCompatPreferenceActivity extends PreferenceActivity
         prefs.unregisterListener(this);
 
         activityCounter--;
-        handlerStopBackgroundMusic.sendEmptyMessageDelayed(0, 100);
+        //handlerStopBackgroundMusic.sendEmptyMessageDelayed(0, 100);
     }
 
     @Override
