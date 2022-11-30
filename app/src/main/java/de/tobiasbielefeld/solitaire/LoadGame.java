@@ -32,7 +32,7 @@ import static de.tobiasbielefeld.solitaire.SharedData.*;
 /**
  * Everything about loading a game should be here. If you want to add a game, just expand the switch
  * statements with a new case. But think of the order! Every game is alphabetically ordered.
- * The order is important for the methods which returns ArrayLists.
+ * The order is important for the methods which returns ArrayList.
  */
 
 public class LoadGame {
