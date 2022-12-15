@@ -31,6 +31,7 @@ import android.text.TextPaint;
 import android.util.Log;
 
 import de.tobiasbielefeld.solitaire.R;
+import de.tobiasbielefeld.solitaire.classes.Stack;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 
