@@ -118,7 +118,7 @@ public class GameLogic {
         } else {
             //scores.load();
             recordList.load();
-            //timer.setCurrentTime(prefs.getSavedEndTime());
+            timer.setCurrentTime(prefs.getSavedEndTime());
 
             //timer will be loaded in onResume() of the game manager
 
@@ -215,7 +215,7 @@ public class GameLogic {
         //scores.reset();
         movingCards.reset();
         recordList.reset();
-        //timer.reset();
+        timer.reset();
         //autoComplete.hideButton();
 
         for (Stack stack : stacks) {
@@ -258,7 +258,7 @@ public class GameLogic {
             //scores.updateBonus();
             //scores.addNewScore(movedFirstCard);
             recordList.reset();
-            //timer.setWinningTime();
+            timer.setWinningTime();
             //autoComplete.hideButton();
             animate.winAnimation();
             won = true;

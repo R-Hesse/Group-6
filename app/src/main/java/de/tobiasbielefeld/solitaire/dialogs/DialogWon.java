@@ -68,7 +68,7 @@ public class DialogWon extends CustomDialogFragment {
                             break;
                         case 2:
                             if (gameManager.hasLoaded) {
-                                //timer.save();
+                                timer.save();
                                 gameLogic.setWonAndReloaded();
                                 gameLogic.save();
                             }

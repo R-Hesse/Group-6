@@ -50,7 +50,7 @@ import de.tobiasbielefeld.solitaire.helper.Preferences;
 import de.tobiasbielefeld.solitaire.helper.RecordList;
 //import de.tobiasbielefeld.solitaire.helper.Scores;
 //import de.tobiasbielefeld.solitaire.helper.Sounds;
-//import de.tobiasbielefeld.solitaire.helper.Timer;
+import de.tobiasbielefeld.solitaire.helper.Timer;
 
 /**
  * static data which is shared across the whole project, i like this more than passing stuff around
@@ -78,7 +78,7 @@ public class SharedData {
     public static Animate animate;
 
     //public static AutoComplete autoComplete;
-    //public static Timer timer;
+    public static Timer timer;
     //public static Sounds sounds;
     public static RecordList recordList;
     public static AutoMove autoMove;

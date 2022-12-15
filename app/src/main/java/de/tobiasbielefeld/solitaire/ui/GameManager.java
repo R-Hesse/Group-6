@@ -59,7 +59,7 @@ import de.tobiasbielefeld.solitaire.helper.Hint;
 import de.tobiasbielefeld.solitaire.helper.RecordList;
 //import de.tobiasbielefeld.solitaire.helper.Scores;
 //import de.tobiasbielefeld.solitaire.helper.Sounds;
-//import de.tobiasbielefeld.solitaire.helper.Timer;
+import de.tobiasbielefeld.solitaire.helper.Timer;
 import de.tobiasbielefeld.solitaire.ui.settings.Settings;
 import de.tobiasbielefeld.solitaire.ui.statistics.StatisticsActivity;
 
@@ -123,7 +123,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
         gameLogic = new GameLogic(gm);
         animate = new Animate(gm);
         //autoComplete = new AutoComplete(gm);
-        //timer = new Timer(gm);
+        timer = new Timer(gm);
         //sounds = new Sounds(gm);
         dealCards = new DealCards(gm);
         ensureMovability = new EnsureMovability();
@@ -326,7 +326,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
 
         //ony save if the game has been loaded before
         if (hasLoaded) {
-            //timer.save();
+            timer.save();
             gameLogic.save();
         }
 
@@ -360,7 +360,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
 
         activityPaused = false;
 
-        //timer.load();
+        timer.load();
         //autoComplete.resume();
         autoMove.resume();
         hint.resume();
