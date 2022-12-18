@@ -29,6 +29,9 @@ import java.util.ArrayList;
 
 import de.tobiasbielefeld.solitaire.R;
 import de.tobiasbielefeld.solitaire.classes.CustomAppCompatActivity;
+import de.tobiasbielefeld.solitaire.ui.about.AboutActivity;
+import de.tobiasbielefeld.solitaire.ui.manual.Manual;
+import de.tobiasbielefeld.solitaire.ui.settings.Settings;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 import static de.tobiasbielefeld.solitaire.helper.Preferences.*;
@@ -100,25 +103,24 @@ public class GameSelector extends CustomAppCompatActivity
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
-//        switch (item.getItemId()) {
-//            case R.id.item_settings:
-//                startActivity(new Intent(getApplicationContext(), Settings.class));
-//                break;
-//            case R.id.item_manual:
-//                startActivity(new Intent(getApplicationContext(), Manual.class));
-//                break;
-//            case R.id.item_about:
-//                startActivity(new Intent(getApplicationContext(), AboutActivity.class));
-//                break;
-//            case R.id.item_close:
-//                finish();
-//                break;
-//        }
-//
-//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-//        drawer.closeDrawer(GravityCompat.START);
-//        return true;
-        return false;
+        switch (item.getItemId()) {
+            case R.id.item_settings:
+                startActivity(new Intent(getApplicationContext(), Settings.class));
+                break;
+            case R.id.item_manual:
+                startActivity(new Intent(getApplicationContext(), Manual.class));
+                break;
+            case R.id.item_about:
+                startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+                break;
+            case R.id.item_close:
+                finish();
+                break;
+        }
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     /**
