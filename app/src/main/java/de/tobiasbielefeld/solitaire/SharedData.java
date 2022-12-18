@@ -197,11 +197,11 @@ public class SharedData {
      */
     public static void moveToStack(ArrayList<Card> cards, ArrayList<Stack> destinations, int option) {
 
-        /*if (!stopUiUpdates) {
+        if (!stopUiUpdates) {
             if (option == OPTION_UNDO) {
-                scores.undo(cards, destinations);
+                //scores.undo(cards, destinations);
             } else if (option == 0) {
-                scores.move(cards, destinations);
+                //scores.move(cards, destinations);
                 recordList.add(cards);
             } else if (option == OPTION_REVERSED_RECORD) {
                 //reverse the cards and add the reversed list to the record
@@ -212,10 +212,10 @@ public class SharedData {
                 }
 
                 recordList.add(cardsReversed);
-                scores.move(cards, destinations);
+                //scores.move(cards, destinations);
             }
             //else if (option == OPTION_NO_RECORD), do nothing
-        }*/
+        }
 
 
         for (int i = 0; i < cards.size(); i++) {
