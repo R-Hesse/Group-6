@@ -23,6 +23,8 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_game_selector"
+        android:background="@drawable/side_nav_bar"
+        app:menu="@menu/drawer_game_selector"
          />
 
     <LinearLayout

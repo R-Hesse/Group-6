@@ -78,17 +78,17 @@ public class Manual extends CustomAppCompatActivity
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
             drawer.setDrawerListener(toggle);
             toggle.syncState();
-           // navigationView = findViewById(R.id.nav_view);
-            //navigationView.setNavigationItemSelectedListener(this);
-            //navigationView.setCheckedItem(R.id.nav_startpage);
+            navigationView = findViewById(R.id.nav_view);
+            navigationView.setNavigationItemSelectedListener(this);
+            navigationView.setCheckedItem(R.id.nav_startpage);
         } else if (listView != null) {
             if (getSupportActionBar() != null) {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             }
 
-          //  listView.setOnItemClickListener(this);
+            listView.setOnItemClickListener(this);
 
-         //   listView.post(() -> checkMenuItem(0));
+            listView.post(() -> checkMenuItem(0));
         }
 
         //if the manual is called from the in game menu, show the corresponding game rule page

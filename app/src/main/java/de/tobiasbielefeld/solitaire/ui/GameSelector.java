@@ -50,8 +50,8 @@ public class GameSelector extends CustomAppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_selector);
-        //NavigationView navigationView = findViewById(R.id.nav_view);
-        //navigationView.setItemIconTintList(null);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setItemIconTintList(null);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -61,8 +61,8 @@ public class GameSelector extends CustomAppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        //navigationView = findViewById(R.id.nav_view);
-        //navigationView.setNavigationItemSelectedListener(this);
+        navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
         tableLayout = findViewById(R.id.tableLayoutGameChooser);
 
@@ -121,6 +121,7 @@ public class GameSelector extends CustomAppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
     }
 
     /**
