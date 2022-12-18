@@ -48,11 +48,7 @@ public class ChangeLogFragment extends Fragment {
 
         LinearLayout layoutContainer = view.findViewById(R.id.changelog_container);
 
-        String[] titles = new String[]{"3.13", "3.12.1", "3.12", "3.11.3", "3.11.2", "3.11.1", "3.11", "3.10.2", "3.10.1", "3.10", "3.9.2", "3.9.1", "3.9",
-                "3.8.6", "3.8.5", "3.8.4", "3.8.3", "3.8.2", "3.8.1", "3.8", "3.7.2", "3.7.1", "3.7",
-                "3.6.2", "3.6.1", "3.6", "3.5", "3.4", "3.3.5", "3.3.4", "3.3.3", "3.3.2", "3.3.1",
-                "3.3", "3.2", "3.1.5", "3.1.4", "3.1.3", "3.1.2", "3.1.1", "3.1", "3.0.1", "3.0",
-                "2.0.2", "2.0.1", "2.0", "1.4", "1.3", "1.2", "1.1", "1.0"};
+        String[] titles = new String[]{"1.0"};
 
         for (int i = 0; i < titles.length; i++) {
             CardView card = (CardView) LayoutInflater.from(getContext()).inflate(R.layout.changelog_card_view, null);

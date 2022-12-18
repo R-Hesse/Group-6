@@ -84,8 +84,8 @@
 <string name="about_tab_3">"Changelog"</string>
 <string name="about_loading">"Loading…"</string>
 <string name="about_developer">"Developer"</string>
-<string name="about_developer_name">"Tobias Bielefeld"</string>
-<string name="about_compiled">"Compiled on"</string>
+ <string name="about_developer_name">"Ryan Hesse, Thomas Howlett-Seguin, Jeffery Mcmanaman, Faisal Karim"</string>
+<string name="about_compiled">"Released on"</string>
 <string name="about_source_code">"Source code"</string>
 <string name="about_license">"License"</string>
 <string name="about_translations">"Translations"</string>

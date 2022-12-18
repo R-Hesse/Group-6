@@ -128,7 +128,7 @@
     <string name="app_web_URL" translatable="false">https://play.google.com/store/games?pli=1</string>
     <string name="github_issues_URL" translatable="false">https://github.com/Sublimed90/Group-6/issues</string>
     <string name="about_app_github_link" translatable="false"><a href="https://github.com/Sublimed90/Group-6">GitHub</a></string>
-    <string name="about_app_license_link" translatable="false"><a href="">GPL 3.0+</a></string>
+    <string name="about_app_license_link" translatable="false"><a href="https://github.com/Sublimed90/Group-6/issues">Send it Here!</a></string>
 
     <string name="canfield_start_value" translatable="false">canfield_startCardValue</string>
     <string name="old" translatable="false">_old</string>
@@ -162,7 +162,7 @@
     <string name="contributors_english" translatable="false">N9of</string>
     <string name="contributors_esperanto" translatable="false"><a href="https://github.com/verdulo">verdulo</a></string>
     <string name="contributors_finnish" translatable="false"><a href="https://github.com/winjar">winjar</a></string>
-    <string name="contributors_french" translatable="false"><a href="https://github.com/romainhk">romainhk</a>, <a href="https://github.com/cicithesquirrel">cicithesquirrel</a></string>
+    <string name="contributors_french" translatable="false">"Application Auto Translated to French"</string>
     <string name="contributors_german" translatable="false">don.conga</string>
     <string name="contributors_hungarian" translatable="false">Erős Pista</string>
     <string name="contributors_italian" translatable="false">imko92, <a href="https://github.com/dankan1890">dankan1890</a></string>

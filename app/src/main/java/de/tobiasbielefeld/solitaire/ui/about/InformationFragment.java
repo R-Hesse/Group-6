@@ -45,7 +45,6 @@ public class InformationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_about_tab1, container, false);
 
-        TableLayout table_further_contributors = view.findViewById(R.id.about_table_further_contributors);
         TableLayout table_translators = view.findViewById(R.id.about_table_translators);
 
         TextView textViewBuildDate = view.findViewById(R.id.aboutTextViewBuild);       //build date
@@ -56,8 +55,8 @@ public class InformationFragment extends Fragment {
         String buildDate = DateFormat.getDateInstance().format(BuildConfig.TIMESTAMP); //get the build date in locale time format
 
         //update the textViews
-        textViewAppVersion.setText(stringFormat(BuildConfig.VERSION_NAME));
-        textViewBuildDate.setText(stringFormat(buildDate));
+        textViewAppVersion.setText("1.00");
+        textViewBuildDate.setText("Dec 20th, 2022");
 
         //enable the hyperlink clicks
         TextView[] textViews = new TextView[]{textViewGitHubLink, textViewLicenseLink};
@@ -77,15 +76,9 @@ public class InformationFragment extends Fragment {
             }
         }
 
-        //enable hyperlinks in "Further contributors"
-        for (int i = 0; i < table_further_contributors.getChildCount(); i++) {
-            TableRow row = (TableRow) table_further_contributors.getChildAt(i);
 
-            for (int j = 0; j < row.getChildCount(); j++) {
-                TextView text = (TextView) row.getChildAt(j);
-                text.setMovementMethod(LinkMovementMethod.getInstance());
-            }
-        }
+
+
 
         return view;
     }
