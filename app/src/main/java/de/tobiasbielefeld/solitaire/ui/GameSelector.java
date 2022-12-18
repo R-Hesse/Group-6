@@ -12,6 +12,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -74,8 +75,8 @@ public class GameSelector extends CustomAppCompatActivity
 
         // Sets Name in TextView
 
-        TextView welcome = findViewById(R.id.welcome);
-        welcome.setText(getString(R.string.welcome, namePref));
+//        TextView welcome = findViewById(R.id.welcome);
+//        welcome.setText(getString(R.string.welcome, namePref));
 
         if (!prefs.getSavedStartWithMenu()) {
             int savedGame = prefs.getSavedCurrentGame();
@@ -103,17 +104,22 @@ public class GameSelector extends CustomAppCompatActivity
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
+
         switch (item.getItemId()) {
             case R.id.item_settings:
+                Log.d("Menu", "Setting");
                 startActivity(new Intent(getApplicationContext(), Settings.class));
                 break;
             case R.id.item_manual:
+                Log.d("Menu", "Manual");
                 startActivity(new Intent(getApplicationContext(), Manual.class));
                 break;
             case R.id.item_about:
+                Log.d("Menu", "About");
                 startActivity(new Intent(getApplicationContext(), AboutActivity.class));
                 break;
             case R.id.item_close:
+                Log.d("Menu", "Close");
                 finish();
                 break;
         }
@@ -121,7 +127,6 @@ public class GameSelector extends CustomAppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-
     }
 
     /**

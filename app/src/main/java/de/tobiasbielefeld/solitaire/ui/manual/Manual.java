@@ -66,16 +66,16 @@ public class Manual extends CustomAppCompatActivity
         setContentView(isLargeTablet(getApplicationContext()) ? R.layout.activity_manual_xlarge : R.layout.activity_manual);
 
         drawer = findViewById(R.id.drawer_layout);
-       // listView = findViewById(R.id.manual_listView);
+        listView = findViewById(R.id.manual_listView);
 
-        //Toolbar toolbar = findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         fragmentLoaded = false;
 
         loadFragment(ManualStartPage.class);
 
         if (drawer != null) {
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
             drawer.setDrawerListener(toggle);
             toggle.syncState();
             navigationView = findViewById(R.id.nav_view);
@@ -200,9 +200,6 @@ public class Manual extends CustomAppCompatActivity
                 break;
             case R.id.nav_games:
                 fragmentClass = ManualGames.class;
-                break;
-            case R.id.nav_statistics:
-                fragmentClass = ManualStatistics.class;
                 break;
             case R.id.nav_feedback:
                 fragmentClass = ManualFeedback.class;

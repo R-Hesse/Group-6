@@ -123,12 +123,12 @@
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
-    <string name="changelog_URL" translatable="false">file:///android_asset/changelog.html</string>
-    <string name="app_market_URL" translatable="false">market://details?id=de.tobiasbielefeld.solitaire</string>
-    <string name="app_web_URL" translatable="false">https://play.google.com/store/apps/details?id=de.tobiasbielefeld.solitaire</string>
-    <string name="github_issues_URL" translatable="false">https://github.com/TobiasBielefeld/Simple-Solitaire/issues</string>
-    <string name="about_app_github_link" translatable="false"><a href="https://github.com/TobiasBielefeld/Simple-Solitaire">GitHub</a></string>
-    <string name="about_app_license_link" translatable="false"><a href="https://www.gnu.org/licenses/gpl.html">GPL 3.0+</a></string>
+    <string name="changelog_URL" translatable="false"><a href=" " /> </string>
+    <string name="app_market_URL" translatable="false"><a href=" "/> </string>
+    <string name="app_web_URL" translatable="false">https://play.google.com/store/games?pli=1</string>
+    <string name="github_issues_URL" translatable="false">https://github.com/Sublimed90/Group-6/issues</string>
+    <string name="about_app_github_link" translatable="false"><a href="https://github.com/Sublimed90/Group-6">GitHub</a></string>
+    <string name="about_app_license_link" translatable="false"><a href="">GPL 3.0+</a></string>
 
     <string name="canfield_start_value" translatable="false">canfield_startCardValue</string>
     <string name="old" translatable="false">_old</string>

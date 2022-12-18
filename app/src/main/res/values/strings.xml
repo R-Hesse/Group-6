@@ -107,7 +107,7 @@
 <!-- Manual -->
 <string name="manual_games">"Games"</string>
 <string name="manual_feedback">"Feedback"</string>
-<string name="manual_startpage">"Start page"</string>
+<string name="manual_startpage">"Welcome to Group 6 Solitaire"</string>
 <string name="manual_back_to_game">"Back to game"</string>
 <string name="manual_structure">"Structure"</string>
 <string name="manual_objective">"Objective"</string>
@@ -119,15 +119,16 @@
 <string name="manual_bonus">"After winning a game, you get a bonus: The faster you win, the higher the bonus will be."</string>
 <string name="manual_open_google_play">"Open Google Play"</string>
 <string name="manual_open_github">"Open GitHub Repo"</string>
-<string name="manual_games_text1">"Choose a game to show its structure, objective, rules and scoring."</string>
-<string name="manual_startpage_text">"Welcome to the manual of this game collection! I hope it will explain everything. 
+<string name="manual_games_text1">"Use the link below to view the rules to Group 6's            One Card Draw solitaire game."</string>
+<string name="manual_startpage_text">"We have completed all of the stakeholder requirements and are proud to deliver our game. Have a look around our menus and get familiar with the rules of solitaire.
 
-Use the menu on the left side to access the other manual pages."</string>
-<string name="manual_general_main_menu">"The usage of the main menu is relatively simple. Just tap on a game to start it. 
+ Feel free to send us any feedback using out GitRepo!"</string>
 
-The app will automatically load the last played game on a restart, if the app was paused in it. This behavior can be disabled in the settings under \"General\".
+ <string name="manual_general_main_menu">"Select a game by clicking the icon and it will start a new game if it's your first time playing with us. Returning users will have their previously saved game loaded
 
-In the settings, you can also find the section \"Main menu\", where it's possible to hide and reorder games in the menu and change the number of columns, so more games fit on the screen at once."</string>
+Group 6 has completed the one draw card game and will be hoping to incorporate a full vegas style mode in future releases. As of the initial deployment, one card draw is our fully functional game.
+
+Use the main menu side bar to navigate our application and view potential features in development for future releases."</string>
 <string name="manual_ui_text">"A game will always show a little menu on the bottom part of the screen (Portrait mode) or on the right side (Landscape mode). It will also show the current score and current played time of the game. If possible, these two values will be saved for the high-score list. The menu contains 5 items, which have the following effects (buttons from left to right):
 
 The \"Scores\" button will show a new window with the high scores and the count of won games of the current game.
@@ -139,15 +140,13 @@ The \"Menu\" button shows three different actions: Start a new game by mixing th
 The \"Undo\" button will revert the last movement, but this will cost 25 points. This can be used for up to 20 last movements.
 
 The \"Settings\" button simply opens the settings menu."</string>
-<string name="manual_feedback_text">"Found a bug or an error? Something I should improve? Should I add another game to the collection? Maybe you want to help with some translations? Or have another idea?
+<string name="manual_feedback_text">"Group 6 is happy to have deployed their first iteration of release. We know not everything is perfect and would love some first hand feedback.
 
-I am happy to receive any kind of feedback. If you feel the need to contact me, you should consider the following two options:
+We have provided a button for authenticated users to log into GitHub and report any issues directly to our project repository. If you have any questions, comments, of concerns please don't hesitate to reach out to our team.
 
-Use the Issue Tracker on GitHub: The project of this app on GitHub has a neat function to report issues. Just click on the button on the left side of the screen to open the Issue Tracker with the Internet browser.
+We can't improve without the support of our community and appreciate the time it takes to send a ticket to us.
 
-Use a rating in Google Play: Just leave a rating on the page from this app and write anything you want in it. Click on the button to the right side to open the Google Play Store (if installed).
-
-Thank you in advance for your feedback :)"</string>
+The second link to the google play store will be properly connected once our application passes their intense review processes. Thank you for your patience."</string>
 <string name="manual_Klondike_structure">"1 deck of 52 cards.
 
 7 tableau stacks, 4 foundation stacks, 1 main and 1 discard stack."</string>
@@ -590,22 +589,21 @@ On the tableau, only top cards can be moved and they can only be moved to the fo
 <string name="statistics_no_entries">"No entries, go play some games!"</string>
 <string name="dialog_auto_move">"Auto move"</string>
 <string name="dialog_show_hints">"Show hints"</string>
-<string name="manual_ui_text_part_1">"A game will always show a little menu on the bottom part of the screen (Portrait mode) or on the right side (Landscape mode). It will also show the current score and current played time of the game. The menu contains 5 items, which have the following effects (buttons from left to right)
+<string name="manual_ui_text_part_1">"Group 6 has developed a sleek, responsive, and functional UI to engage the user during gameplay We've included a timer and score for personal competition and some hint factors to support gameplay.
 
-The \"Statistics\" button will show a new window with different statistics of the current game, like the high scores.
+ "</string>
+<string name="manual_ui_text_part_2">"Show Hints: UI will show up to 3 possible card movements at once but also decrease the score by 25 points.
+ "</string>
+ <string name="manual_ui_text_part_3">"Shuffle Cards: UI mixes available cards to reshuffle into the deck.
+ "</string>
+<string name="manual_ui_text_part_4">"Re-Deal Cards: UI restarts the game with the current card layout.
+ "</string>
+<string name="manual_ui_text_part_5">"Game Rules: The rules for one card draw solitaire can be found in the appropriate menu selection.
+ "</string>
 
-The \"Support\" button will show a little help menu. Here you can select:"</string>
-<string name="manual_ui_text_part_2">"Show hints: Show up to 3 possible card movements at once. But this will decrease the current score by 25. Notice that trivial movements like moving every card to an empty field or pressing on the main stack aren't shown as a hint. If no hint was shown, the score won't decrease."</string>
-<string name="manual_ui_text_part_3">"Auto move: Automatically move as many cards as possible. This option is intended to be used in situations eg. when only one card is still faced down, but you need to move every other card on that stack to access it. So this option can speed up the game a little bit."</string>
-<string name="manual_ui_text_part_4">"Mix cards: If you are in a situation where no movement is possible, you can use this option to mix the current cards. Note that cards already in correct order or cards on the foundation will be ignored in the mixing."</string>
-<string name="manual_ui_text_part_5">"Game rules: Directly open the manual page of the current game."</string>
-<string name="manual_ui_text_part_6">"The \"Menu\" button shows three different actions:"</string>
-<string name="manual_ui_text_part_7">"Start a new game: Mixing the cards and draw a new deal."</string>
-<string name="manual_ui_text_part_8">"Give cards again: Restart the current game with the same layout of cards."</string>
-<string name="manual_ui_text_part_9">"Return to main menu: Save the current game state and show the game selection menu."</string>
-<string name="manual_ui_text_part_10">"The \"Undo\" button will revert the last movement, but this will cost 25 points. This can be used for up to 20 last movements. (The amount can be increased in the expert settings)
+<string name="manual_ui_text_part_10">"The \"Undo\" button will revert the last movement, but this will cost 25 points. This can be used for up to 20 last movements.
 
-The \"Settings\" button simply opens the settings menu."</string>
+ The \"Settings\" button simply opens the settings menu."</string>
 <string name="manual_statistics_part_1">"There are statistics collected for each game. You can access them from the in-game menu bar. Collected information are:"</string>
 <string name="manual_statistics_part_2">"The number of played and won games"</string>
 <string name="manual_statistics_part_3">"The total amount of earned score points"</string>
@@ -717,5 +715,6 @@ Press on the main stack to deal one card to every tableau stack at once."</strin
  <string name="Solitaire">Solitaire</string>
     <string name="games_OneCardDraw">OneCardDraw</string>
  <string name="welcome">Welcome %s! Let\'s Play</string>
+    <string name="welcome_man">Welcome</string>
 
 </resources>

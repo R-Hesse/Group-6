@@ -40,7 +40,6 @@ public class ManualUserInterface extends Fragment {
         View view = inflater.inflate(R.layout.fragment_manual_user_interface, container, false);
 
         TextView textView1 = view.findViewById(R.id.text_view_manual_ui_1);
-        TextView textView2 = view.findViewById(R.id.text_view_manual_ui_2);
 
         //get the strings for the enumerated text part (with bullet characters)
         CharSequence strings1[] = new CharSequence[]{
@@ -48,14 +47,9 @@ public class ManualUserInterface extends Fragment {
                 getText(R.string.manual_ui_text_part_4), getText(R.string.manual_ui_text_part_5)
         };
 
-        CharSequence strings2[] = new CharSequence[]{
-                getText(R.string.manual_ui_text_part_7), getText(R.string.manual_ui_text_part_8),
-                getText(R.string.manual_ui_text_part_9)
-        };
 
         //set up the textViews
         textView1.setText(createBulletParagraph(strings1));
-        textView2.setText(createBulletParagraph(strings2));
 
         return view;
     }

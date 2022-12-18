@@ -32,16 +32,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/changelog_text_padding" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/manual_ui_text_part_6" />
 
-        <TextView
-            android:id="@+id/text_view_manual_ui_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/changelog_text_padding" />
+
+
 
         <TextView
             android:layout_width="match_parent"
