@@ -61,95 +61,22 @@ public class DialogPreferenceOnlyForThisGame extends CustomDialogPreference {
 
     public DialogPreferenceOnlyForThisGame(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setDialogLayoutResource(R.layout.dialog_settings_only_for_this_game);
-        setDialogIcon(null);
-        setDialogTitle(null);
-        this.context = context;
+
     }
 
     @Override
     protected void onBindDialogView(View view) {
-        TextView textView1 = view.findViewById(R.id.textViewDialogOnlyForThisGame1);
-        TextView textView2 = view.findViewById(R.id.textViewDialogOnlyForThisGame2);
-        TextView textView3 = view.findViewById(R.id.textViewDialogOnlyForThisGame3);
-
-        //settings were opened from the main menu
-        if (isNotInGame()) {
-            String sharedPrefNames[] = lg.getSharedPrefNameList();
-            String gameNames[] = lg.getDefaultGameNameList(context.getResources());
-
-            ArrayList<String> gamesWithIndividualSettings = new ArrayList<>(sharedPrefNames.length);
-
-            for (int i = 0; i < sharedPrefNames.length; i++) {
-                SharedPreferences savedGameData = context.getSharedPreferences(sharedPrefNames[i], MODE_PRIVATE);
-
-                if (savedGameData.getBoolean(PREF_KEY_SETTINGS_ONLY_FOR_THIS_GAME, DEFAULT_SETTINGS_ONLY_FOR_THIS_GAME)) {
-                    gamesWithIndividualSettings.add(gameNames[i]);
-                }
-            }
-
-            textView1.setText(R.string.settings_dialog_only_for_this_game_information_2);
-            textView2.setText(createBulletParagraph(gamesWithIndividualSettings.toArray(new CharSequence[0])));
-            textView3.setText(R.string.settings_dialog_only_for_this_game_information_3);
-            //settings are switching to individual settings
-        } else if (!prefs.hasSettingsOnlyForThisGame()) {
-
-            //build the list with bullet characters
-            CharSequence strings[] = new CharSequence[]{
-                    context.getString(R.string.settings_dialog_only_for_this_game_enable_2),
-                    context.getString(R.string.settings_dialog_only_for_this_game_enable_3),
-                    context.getString(R.string.settings_dialog_only_for_this_game_enable_4)
-            };
-
-            //set up the textView
-            textView1.setText(R.string.settings_dialog_only_for_this_game_enable_1);
-            textView2.setText(createBulletParagraph(strings));
-            textView3.setText(R.string.settings_dialog_only_for_this_game_enable_5);
-            //settings are switching back to normal settings
-        } else {
-            textView1.setText(R.string.settings_dialog_only_for_this_game_disable);
-            textView2.setVisibility(GONE);
-            textView3.setVisibility(GONE);
-        }
 
         super.onBindDialogView(view);
     }
 
     @Override
     protected void onDialogClosed(boolean positiveResult) {
-        if (positiveResult) {
-            if (!isNotInGame()) {
-                if (!prefs.hasSettingsOnlyForThisGame()) {
-                    //copy all relevant settings before switching to game-individual settings
-                    prefs.copyToGameIndividualSettings();
 
-                    prefs.setSettingsOnlyForThisGame(true);
-
-                } else {
-                    prefs.setSettingsOnlyForThisGame(false);
-                }
-
-                if (widget != null) {
-                    widget.setChecked(!widget.isChecked());
-                }
-            } else {
-                //reset the setting for individual game settings for all games
-                for (String name : lg.getSharedPrefNameList()) {
-                    SharedPreferences savedGameData = context.getSharedPreferences(name, MODE_PRIVATE);
-
-                    if (savedGameData.getBoolean(PREF_KEY_SETTINGS_ONLY_FOR_THIS_GAME, DEFAULT_SETTINGS_ONLY_FOR_THIS_GAME)) {
-                        savedGameData.edit().putBoolean(PREF_KEY_SETTINGS_ONLY_FOR_THIS_GAME, false).apply();
-                    }
-                }
-
-                ((Settings) getContext()).hidePreferenceOnlyForThisGame();
-                ////showToast(context.getString(R.string.settings_dialog_only_for_this_game_removed_all), context);
-            }
         }
 
 
-        super.onDialogClosed(positiveResult);
-    }
+
 
     /*
      * Get the layout from the preference, so I can get the imageView from the widgetLayout
@@ -159,53 +86,12 @@ public class DialogPreferenceOnlyForThisGame extends CustomDialogPreference {
         View view = super.onCreateView(parent);
         view.setBackgroundResource(R.color.colorDrawerSelected);
 
-        //get rid of the stupid single line restriction for the title
-        TextView textView = view.findViewById(android.R.id.title);
-        if (textView != null) {
-            textView.setSingleLine(false);
-        }
-
-        widget = view.findViewById(R.id.preference_only_for_this_game_switch);
-
-        if (isNotInGame()) {
-            if (widget != null) {
-                widget.setVisibility(GONE);
-            }
-
-            if (getNumberOfGamesWithIndividualSettings() > 0) {
-                setTitle(context.getString(R.string.settings_dialog_only_for_this_game_information_1));
-            }
-
-        } else {
-            setTitle(String.format(context.getString(R.string.Solitaire), lg.getGameName()));
-
-            if (widget != null) {
-                widget.setChecked(prefs.hasSettingsOnlyForThisGame());
-            }
-        }
 
         return view;
     }
 
-    private int getNumberOfGamesWithIndividualSettings() {
-        int numberOfGamesWithIndividualSettings = 0;
 
-        for (String name : lg.getSharedPrefNameList()) {
-            SharedPreferences savedGameData = context.getSharedPreferences(name, MODE_PRIVATE);
 
-            if (savedGameData.getBoolean(PREF_KEY_SETTINGS_ONLY_FOR_THIS_GAME, DEFAULT_SETTINGS_ONLY_FOR_THIS_GAME)) {
-                numberOfGamesWithIndividualSettings++;
-            }
-        }
 
-        return numberOfGamesWithIndividualSettings;
-    }
 
-    private boolean isNotInGame() {
-        return prefs.getSavedCurrentGame() == DEFAULT_CURRENT_GAME;
-    }
-
-    public boolean canBeHidden() {
-        return isNotInGame() && getNumberOfGamesWithIndividualSettings() == 0;
-    }
 }

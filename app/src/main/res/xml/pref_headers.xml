@@ -9,14 +9,6 @@
         android:summary="@string/settings_menu_description"
         android:title="@string/settings_menu" />
 
-    <header
-        android:summary="@string/settings_games_description"
-        android:title="@string/settings_games">
-
-        <intent
-            android:targetClass="de.tobiasbielefeld.solitaire.ui.settings.SettingsGames"
-            android:targetPackage="de.tobiasbielefeld.solitaire" />
-    </header>
 
     <header
         android:fragment="de.tobiasbielefeld.solitaire.ui.settings.Settings$SoundPreferenceFragment"
@@ -33,10 +25,6 @@
         android:summary="@string/settings_other_description"
         android:title="@string/settings_other" />
 
-    <header
-        android:fragment="de.tobiasbielefeld.solitaire.ui.settings.Settings$ExpertSettingsPreferenceFragment"
-        android:summary="@string/settings_expert_settings_text"
-        android:title="@string/settings_expert_settings" />
 
 
 </preference-headers>
