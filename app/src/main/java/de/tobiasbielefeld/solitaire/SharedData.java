@@ -65,7 +65,7 @@ public class SharedData {
     public static String RESTART_DIALOG = "dialogRestart";
     public static String WON_DIALOG = "dialogWon";
 
-
+   //wsekdnclinwerlfik
     public static Game currentGame;
 
     public static Card[] cards;
