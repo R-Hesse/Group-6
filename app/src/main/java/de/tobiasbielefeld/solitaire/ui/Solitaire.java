@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 import de.tobiasbielefeld.solitaire.R;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class Solitaire extends AppCompatActivity {
 
     EditText name;
     String PREF_FILE_NAME = "shared_prefs";
@@ -36,7 +36,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
             // Linking the button to intent to pass the information around
 
-            Intent nextPage = new Intent (WelcomeActivity.this, GameSelector.class);
+            Intent nextPage = new Intent (Solitaire.this, GameSelector.class);
             nextPage.putExtra("typed", name.getText().toString() );
             startActivityForResult(nextPage, 1);
             SharedPreferences.Editor prefsEditor = namePrefs.edit();
