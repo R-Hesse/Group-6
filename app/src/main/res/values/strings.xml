@@ -162,15 +162,9 @@ Only kings can be placed on empty tableau stacks and only aces can be placed on 
 By pressing on the main stack, cards will be moved to the discard stack from where you can use them. The amount of cards depends on the chosen settings. If \"Draw 1\" has been selected, only one card will be moved (This is the default setting, for easier game play). With \"Draw 3\" enabled, 3 cards will be moved at once.
 
 If the main stack is empty, you can still press on it to move every card from the discard stack to the main stack and use them again."</string>
-<string name="manual_Klondike_scoring">"From tableau to foundation: +60
+<string name="manual_Klondike_scoring">"Score is calculated by how fast the user completes the game. Top score of 500,000 points is received when the user wins the game in under 5 minutes.
 
-From discard stack to foundation: +45
-
-From foundation to tableau: -75
-
-Turn a card over: +25
-
-Return all cards from discard stack to main stack: -200"</string>
+Each minute that passes after the top score was missed will lower the users score by 100,000 points."</string>
 <string name="manual_Freecell_structure">"1 deck of 52 cards.
 
 8 tableau stacks, 4 foundation stacks and 4 free cells."</string>
@@ -374,15 +368,9 @@ By pressing on the main stack, cards will be moved to the discard stack from whe
 If the main stack is empty, you can still press on it to move every card from the discard stack to the main stack and use them again."</string>
 
 <!-- adjusted the costs of movements -->
-<string name="manual_Vegas_scoring">"The amount of money you win depends on the bet you set up in the settings. You pay eg. 52$ at the beginning of the game, and with every card played to the foundation you win 5$. 
+<string name="manual_Vegas_scoring">"Score is calculated by how fast the user completes the game. Top score of 500,000 points is received when the user wins the game in under 5 minutes.
 
-A game will be saved as won, when the score is above 0. Playing cards back from the foundation costs 2 * 5$. 
-
-Using the hint or undo functions will also cost 5$. 
-
-There is also an option to keep your score over multiple games. In that case, a score will be saved after resetting the score and starting a new game. 
-
-DISCLAIMER: You do not play for real money in this game :)"</string>
+Each minute that passes after the top score was missed will lower the users score by 100,000 points."</string>
 <string name="manual_Calculation_structure">"1 deck of 52 cards.
 
 4 tableau stacks, 4 foundation stacks, 1 main and 1 discard stack"</string>
@@ -596,7 +584,7 @@ On the tableau, only top cards can be moved and they can only be moved to the fo
 <string name="manual_ui_text_part_1">"Group 6 has developed a sleek, responsive, and functional UI to engage the user during gameplay We've included a timer and score for personal competition and some hint factors to support gameplay.
 
  "</string>
-<string name="manual_ui_text_part_2">"Show Hints: UI will show up to 3 possible card movements at once but also decrease the score by 25 points.
+<string name="manual_ui_text_part_2">"Double Click: UI will move the card which has been tapped twice in succession to move it to an acceptable spot.
  "</string>
  <string name="manual_ui_text_part_3">"Shuffle Cards: UI mixes available cards to reshuffle into the deck.
  "</string>
@@ -604,8 +592,11 @@ On the tableau, only top cards can be moved and they can only be moved to the fo
  "</string>
 <string name="manual_ui_text_part_5">"Game Rules: The rules for one card draw solitaire can be found in the appropriate menu selection.
  "</string>
+ <string name="manual_ui_text_part_6">"Score is calculated by how fast the user completes the game. Top score of 500,000 points is received when the user wins the game in under 5 minutes. Each minute that passes after the top score was missed will lower the users score by 100,000 points."</string>
 
-<string name="manual_ui_text_part_10">"The \"Undo\" button will revert the last movement, but this will cost 25 points. This can be used for up to 20 last movements.
+
+
+<string name="manual_ui_text_part_10">"The \"Undo\" button will revert the last movement. This can be used for up to 20 last movements.
 
  The \"Settings\" button simply opens the settings menu."</string>
 <string name="manual_statistics_part_1">"There are statistics collected for each game. You can access them from the in-game menu bar. Collected information are:"</string>
