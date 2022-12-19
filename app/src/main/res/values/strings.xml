@@ -57,7 +57,11 @@
 <string name="dialog_win_titel">"Congratulations! You Won!"</string>
 <string name="dialog_win_score">"Score: %1$d"</string>
 <string name="dialog_win_bonus">"Bonus: %1$d"</string>
-<string name="dialog_win_total">"Total: %1$d"</string>
+<string name="dialog_win_time1">"Firstif: %1$d"</string>
+ <string name="dialog_win_time2">"Secondif: %1$d"</string>
+ <string name="dialog_win_time3">"Third if: %1$d"</string>
+ <string name="dialog_win_time4">"Fourthif: %1$d"</string>
+ <string name="dialog_win_time5">"Fifthif: %1$d"</string>
 
 <!-- dialog mix cards -->
 <string name="dialog_mix_cards_title">"Mix cards"</string>

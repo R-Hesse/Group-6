@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_won_layout_scores"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -13,14 +14,11 @@
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
         android:paddingBottom="10dp"
+        android:gravity="center"
         android:text="@string/dialog_win_titel"
         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
-    <LinearLayout
-        android:id="@+id/dialog_won_layout_scores"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,15 +35,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/black" />
 
-            <TextView
-                android:id="@+id/dialog_won_text2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/dialog_win_bonus"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@android:color/black" />
+
         </LinearLayout>
 
         <TextView
@@ -53,10 +43,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/dialog_win_total"
+            android:text="Time: "
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black" />
 
-    </LinearLayout>
+
 
 </LinearLayout>

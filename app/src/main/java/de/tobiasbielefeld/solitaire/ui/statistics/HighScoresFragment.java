@@ -15,10 +15,10 @@
  *
  * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
  */
+/*
 
 package de.tobiasbielefeld.solitaire.ui.statistics;
 
-/*
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -33,24 +33,17 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 import de.tobiasbielefeld.solitaire.R;
-//import de.tobiasbielefeld.solitaire.helper.Scores;
+import de.tobiasbielefeld.solitaire.helper.Scores.*;
+import de.tobiasbielefeld.solitaire.helper.Scores;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 
-*/
-/**
- * Shows the high scores of the current game
- *//*
 
 
 public class HighScoresFragment extends Fragment {
 
     private String dollar;
 
-    */
-/**
-     * Loads the high score list
-     *//*
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -69,15 +62,14 @@ public class HighScoresFragment extends Fragment {
         TableLayout tableLayout = view.findViewById(R.id.statisticsTableHighScores);
         TextView textNoEntries = view.findViewById(R.id.statisticsTextNoEntries);
 
-        */
-/*if (scores.getHighScore(0, 0) != 0) {
+if (scores.getHighScore(0, 0) != 0) {
             textNoEntries.setVisibility(View.GONE);
         }
 
         for (int i = 0; i < Scores.MAX_SAVED_SCORES; i++) { //for each entry in highScores, add a new view with it
             if (scores.getHighScore(i, 0) == 0) {        //if the score is zero, don't show it
                 continue;
-            }*//*
+            }
 
 
             TableRow row = (TableRow) LayoutInflater.from(getContext()).inflate(R.layout.statistics_scores_row, null);
@@ -99,12 +91,10 @@ public class HighScoresFragment extends Fragment {
         return view;
     }
 
-    */
-/**
-     * loads the other shown data
-     *//*
+
 
     private void loadData() {
         dollar = currentGame.isPointsInDollar() ? "$" : "";
     }
-}*/
+}
+*/

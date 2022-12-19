@@ -27,6 +27,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Locale;
+import java.util.Timer;
 
 import de.tobiasbielefeld.solitaire.R;
 import de.tobiasbielefeld.solitaire.classes.CustomDialogFragment;
@@ -41,11 +42,11 @@ import static de.tobiasbielefeld.solitaire.SharedData.*;
 
 public class DialogWon extends CustomDialogFragment {
 
-    private static String KEY_SCORE = "PREF_KEY_SCORE";
-    private static String KEY_BONUS = "BONUS";
-    private static String KEY_TOTAL = "TOTAL";
+   private static String KEY_SCORE = "PREF_KEY_SCORE";
+    /* private static String KEY_BONUS = "BONUS";
+    private static String KEY_TOTAL = "TOTAL";*/
 
-    private long score, bonus, total;
+    private long score;
 
     @Override
     @NonNull
@@ -81,31 +82,52 @@ public class DialogWon extends CustomDialogFragment {
                     //just cancel
                 });
 
-        LinearLayout layoutScores = view.findViewById(R.id.dialog_won_layout_scores);
+       LinearLayout layoutScores = view.findViewById(R.id.dialog_won_layout_scores);
 
         //only show the calculation of the score if bonus is enabled
         if (currentGame.isBonusEnabled()) {
-            layoutScores.setVisibility(View.VISIBLE);
+            view.setVisibility(View.VISIBLE);
             TextView text1 = view.findViewById(R.id.dialog_won_text1);
-            TextView text2 = view.findViewById(R.id.dialog_won_text2);
+            //TextView text2 = view.findViewById(R.id.dialog_won_text2);
             TextView text3 = view.findViewById(R.id.dialog_won_text3);
 
             /*score = (savedState != null && savedState.containsKey(KEY_SCORE))
                     ? savedState.getLong(KEY_SCORE)
                     : scores.getPreBonus();
-            bonus = (savedState != null && savedState.containsKey(KEY_BONUS))
-                    ? savedState.getLong(KEY_BONUS)
-                    : scores.getBonus();
-            total = (savedState != null && savedState.containsKey(KEY_TOTAL))
-                    ? savedState.getLong(KEY_TOTAL)
-                    : scores.getScore();*/
-
-            text1.setText(String.format(Locale.getDefault(), getContext()
-                    .getString(R.string.dialog_win_score), score));
-            text2.setText(String.format(Locale.getDefault(), getContext()
-                    .getString(R.string.dialog_win_bonus), bonus));
-            text3.setText(String.format(Locale.getDefault(), getContext()
-                    .getString(R.string.dialog_win_total), total));
+            */
+            score = timer.getCurrentTime();
+            int r1 = 500000;
+            int r2 = 400000;
+            int r3 = 300000;
+            int r4 = 100000;
+            if(score <=300){
+                text1.setText(String.format(Locale.getDefault(), getContext()
+                        .getString(R.string.dialog_win_score), r1));
+                text3.setText(String.format(Locale.getDefault(), getContext()
+                        .getString(R.string.dialog_win_time1), score));
+            }
+            if(score > 300 && score <= 400){
+                text1.setText(String.format(Locale.getDefault(), getContext()
+                        .getString(R.string.dialog_win_score), r2));
+                text3.setText(String.format(Locale.getDefault(), getContext()
+                        .getString(R.string.dialog_win_time2), score));
+            }
+            if(score > 400 && score <= 500){
+                text1.setText(String.format(Locale.getDefault(), getContext()
+                        .getString(R.string.dialog_win_score), r3));
+                text3.setText(String.format(Locale.getDefault(), getContext()
+                        .getString(R.string.dialog_win_time3), score));
+            }
+            if(score > 500){
+                text1.setText(String.format(Locale.getDefault(), getContext()
+                        .getString(R.string.dialog_win_score), r4));
+                text3.setText(String.format(Locale.getDefault(), getContext()
+                        .getString(R.string.dialog_win_time4), score));
+            }
+            //text2.setText(String.format(Locale.getDefault(), getContext()
+                    //.getString(R.string.dialog_win_bonus), bonus));
+            //text3.setText(String.format(Locale.getDefault(), getContext()
+                    //.getString(R.string.dialog_win_total), total));
         } else {
             layoutScores.setVisibility(View.GONE);
         }
@@ -117,7 +139,7 @@ public class DialogWon extends CustomDialogFragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putLong(KEY_SCORE, score);
-        outState.putLong(KEY_BONUS, bonus);
-        outState.putLong(KEY_TOTAL, total);
+        //outState.putLong(KEY_BONUS, bonus);
+        //outState.putLong(KEY_TOTAL, total);
     }
 }

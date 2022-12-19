@@ -665,7 +665,7 @@ public class Preferences {
         return savedGameData.getLong(PREF_KEY_VEGAS_TIME, 0);
     }
 
-    /*public long[][] getSavedHighScores() {
+/*    public long[][] getSavedHighScores() {
         long savedScores[][] = new long[MAX_SAVED_SCORES][3];
 
         ArrayList<Long> listScores = getLongList(PREF_KEY_SAVED_SCORES + 0);
@@ -680,9 +680,9 @@ public class Preferences {
         }
 
         return savedScores;
-    }*/
+    }
 
-    /*public long[][] getSavedRecentScores() {
+    public long[][] getSavedRecentScores() {
         long savedScores[][] = new long[MAX_SAVED_SCORES][3];
 
         ArrayList<Long> listScores = getLongList(PREF_KEY_SAVED_RECENT_SCORES + 0);
@@ -851,7 +851,7 @@ public class Preferences {
         savedGameData.edit().putLong(PREF_KEY_VEGAS_TIME, value).apply();
     }
 
-    /*public void saveHighScores(long savedScores[][]) {
+/*    public void saveHighScores(long savedScores[][]) {
         ArrayList<Long> listScores = new ArrayList<>();
         ArrayList<Long> listTimes = new ArrayList<>();
         ArrayList<Long> listDates = new ArrayList<>();
@@ -865,9 +865,9 @@ public class Preferences {
         putLongList(PREF_KEY_SAVED_SCORES + 0, listScores);
         putLongList(PREF_KEY_SAVED_SCORES + 1, listTimes);
         putLongList(PREF_KEY_SAVED_SCORES + 2, listDates);
-    }*/
+    }
 
-    /*public void saveRecentScores(long savedScores[][]) {
+    public void saveRecentScores(long savedScores[][]) {
         ArrayList<Long> listScores = new ArrayList<>();
         ArrayList<Long> listTimes = new ArrayList<>();
         ArrayList<Long> listDates = new ArrayList<>();
@@ -876,13 +876,13 @@ public class Preferences {
             listScores.add(savedScores[i][0]);
             listTimes.add(savedScores[i][1]);
             listDates.add(savedScores[i][2]);
-        }
+        }*/
 
-        putLongList(PREF_KEY_SAVED_RECENT_SCORES + 0, listScores);
+ /*       putLongList(PREF_KEY_SAVED_RECENT_SCORES + 0, listScores);
         putLongList(PREF_KEY_SAVED_RECENT_SCORES + 1, listTimes);
         putLongList(PREF_KEY_SAVED_RECENT_SCORES + 2, listDates);
-    }*/
-
+    }
+*/
     public void saveTotalNumberUndos(int value) {
         savedGameData.edit().putInt(PREF_KEY_TOTAL_NUMBER_UNDOS, value).apply();
     }
