@@ -709,7 +709,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
     }
 
     public void updateGameLayout() {
-        updateMenuBar();
+        //updateMenuBar();
 
         //wait until the game layout dimensions are known, then draw everything
         ViewTreeObserver viewTreeObserver = layoutGame.getViewTreeObserver();
@@ -741,7 +741,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
     /**
      * Updates the menu bar position according to the user settings
      */
-    public void updateMenuBar() {
+   /* public void updateMenuBar() {
         boolean isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
 
         //params for the menu bar
@@ -798,7 +798,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
 
         menuBar.setVisibility(prefs.getHideMenuBar() ? GONE : VISIBLE);
         updateHideMenuButton(isLandscape);
-    }
+    }*/
 
     public void menuClick(View view) {
         //if something important happens don't accept input
@@ -864,7 +864,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
                     loadBackgroundColor();
                 }
                 if (data.hasExtra(getString(R.string.intent_update_menu_bar))) {
-                    updateMenuBar();
+                    //updateMenuBar();
                 }
                 if (data.hasExtra(getString(R.string.intent_text_color))) {
                     setUiElementsColor();
@@ -879,7 +879,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
         }
     }
 
-    private void updateHideMenuButton(boolean isLandscape) {
+/*    private void updateHideMenuButton(boolean isLandscape) {
         boolean menuBarVisible = menuBar.getVisibility() == VISIBLE;
 
         if (prefs.getHideMenuButton()) {
@@ -909,7 +909,7 @@ public class GameManager extends CustomAppCompatActivity implements View.OnTouch
                 }
             }
         }
-    }
+    }*/
 
     private void updateNumberOfRecycles() {
         if (!stopUiUpdates) {
