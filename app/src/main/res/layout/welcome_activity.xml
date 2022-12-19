@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/greenBackground"
-    tools:context=".ui.WelcomeActivity">
+    tools:context=".ui.Solitaire">
 
     <LinearLayout
         android:layout_width="match_parent"

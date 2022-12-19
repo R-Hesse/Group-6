@@ -21,7 +21,7 @@ import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import de.tobiasbielefeld.solitaire.ui.WelcomeActivity.*;
+import de.tobiasbielefeld.solitaire.ui.Solitaire.*;
 
 
 import de.tobiasbielefeld.solitaire.ui.*;

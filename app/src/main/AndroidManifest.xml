@@ -44,8 +44,8 @@
         </activity>
 
         <activity
-            android:name=".ui.WelcomeActivity"
-            android:label="WelcomeActivity"
+            android:name=".ui.Solitaire"
+            android:label="Solitaire"
             android:theme="@style/AppThemeNoActionBar">
 
 
