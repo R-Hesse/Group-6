@@ -26,6 +26,7 @@ import java.util.ArrayList;
 
 import de.tobiasbielefeld.solitaire.games.Game;
 import de.tobiasbielefeld.solitaire.games.OneCardDraw;
+import de.tobiasbielefeld.solitaire.games.Vegas;
 
 import static de.tobiasbielefeld.solitaire.SharedData.*;
 
@@ -59,6 +60,8 @@ public class LoadGame {
                 Log.e("LoadGame.loadClass()", "Your games seems not to be added here?");//fallthrough
             case 0:
                 return new OneCardDraw();
+            case 1:
+                return new Vegas();
 
         }
     }
@@ -81,6 +84,7 @@ public class LoadGame {
         allGameInformation.clear();
 
         allGameInformation.add(new AllGameInformation(R.string.games_Klondike, "Klondike", true, 30));
+        allGameInformation.add(new AllGameInformation(R.string.games_Vegas, "Vegas", false, 30));
 
         GAME_COUNT = allGameInformation.size();
     }
