@@ -204,7 +204,7 @@ public abstract class Game {
      * @param card The card to test
      * @return A destination, if the card can be moved, null otherwise
      */
-    /*public CardAndStack doubleTap(Card card) {
+    public CardAndStack doubleTap(Card card) {
         CardAndStack cardAndStack = null;
         Stack destination;
 
@@ -215,7 +215,7 @@ public abstract class Game {
         }
 
         return cardAndStack;
-    }*/
+    }
 
     /**
      * Called to test whether a card of this stack can be placed somewhere else, or not

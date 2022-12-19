@@ -465,7 +465,11 @@ public class OneCardDraw extends Game {
 
         boolean deal1 = prefs.getSavedKlondikeVegasDrawModeOld(whichGame).equals("1");
         checkEmptyDiscardStack(getMainStack(), stacks[11], stacks[12], stacks[13], deal1);
-    }
+
+        }
+
+
+
 
     public static void checkEmptyDiscardStack(Stack mainStack, Stack discard1, Stack discard2, Stack discard3, boolean deal1) {
 
