@@ -97,9 +97,9 @@ public class OneCardDraw extends Game {
         for (Stack stack : stacks) {
 //            if (stack.getId() > 6 && stack.getId() <= 10) {
 //                stack.setImageBitmap(Stack.background1);
-            if (stack.getId() > 10 && stack.getId() <= 13) {
+            if (stack.getId() > 10 && stack.getId() <= 12) {
                 stack.setImageBitmap(Stack.backgroundTransparent);
-            } else if (stack.getId() == 14) {
+            } else if (stack.getId() == 13) {
                 stack.setImageBitmap(Stack.backgroundTalon);
             }
         }

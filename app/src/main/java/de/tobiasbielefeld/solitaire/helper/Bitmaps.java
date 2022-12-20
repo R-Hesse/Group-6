@@ -193,6 +193,12 @@ public class Bitmaps {
             stackBackgroundHeight = stackBackground.getHeight();
         }
 
+/*        if (stackBackground != null){
+            stackBackground = BitmapFactory.decodeResource(res, R.drawable.backgrounds_stacks_flip);
+            stackBackgroundWidth = stackBackground.getWidth();
+            stackBackgroundHeight = stackBackground.getHeight();
+        }*/
+
         return Bitmap.createBitmap(stackBackground, posX * stackBackgroundWidth,
                 posY * stackBackgroundHeight, stackBackgroundWidth, stackBackgroundHeight);
     }
